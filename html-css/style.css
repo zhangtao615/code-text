@@ -1,0 +1,13 @@
+#h1{
+    background: greenyellow;
+    color: crimson;
+}
+div{
+    background: #ff00ff;
+    color: crimson;
+}
+span{
+    background: #00ff00;
+    color: aqua;
+    font-size: 100px;
+}
