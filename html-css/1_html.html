@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <!--标题-->
     <title>html练习</title>
+    <!--SEO-->
+    <meta name="keywords"content="代码">
+    <meta name="description" content="">
 <!--html所有用户界面显示的文字-->
 <body>
     <h1>This is a heading</h1><hr/>
@@ -13,8 +16,9 @@
     <p>This is a paragraph</p></br>
     <h1>春江花月夜</h1>
     <h2>张若虚</h2>
+    <!--多个p标签是多列显示，列距较大-->
     <p>
-        春江潮水连海平，海上明月共潮生。<br/>
+        春江<del>潮水</del>连海平，海上<ins>明月</ins>共潮生。<br/>
         滟滟随波千万里，何处春江无月明！<br/>
         江流宛转绕芳甸，月照花林皆似霰；<br/>
         空里流霜不觉飞，汀上白沙看不见。<br/>
@@ -33,6 +37,52 @@
         斜月沉沉藏海雾，碣石潇湘无限路。<br/>
         不知乘月几人归，落月摇情满江树。<br/>
     </p>
-    <a href="https://www.google.com">谷歌</a>
+    <!--href网站链接-->
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <!--pre保留文本空格和换行-->
+    <pre>
+
+        #include（stdio.h）
+        printf("hello world!");
+        return 0;
+    </pre>
+    <!--有序列表-->
+    <ol>
+        <li>列表</li>
+        <li>列表</li>
+
+    </ol>
+<!--无序列表-->
+    <ul>
+        <li>列表</li>
+        <li>列表</li>
+
+
+    </ul>
+<!--alt为提示，当图片加载失败-->
+    <a href="http://www.baidu.com" target="_blank"><img src="3f3ee19a3b0c9b85.jpg" alt="图片加载失败" title="百度" ></a>
+
+    <!--表格-->
+    <!--colspan表示跨行-->
+    <!--rowspan表示跨列-->
+    <!--tr表示行，td表示列-->
+    <table border="1">
+        <tr>
+            <td colspan="2">1</td>
+
+        </tr>
+        <tr>
+            <td rowspan="">1</td>
+            <td>2</td>
+        </tr>
+
+    </table>
+    <!--多个span标签是同行显示-->
+    <span>这是一个sapn标签</span>
+    <span>这是一个sapn标签</span>
+    <!--div用于布局 多个div是多列显示，列之间距离很小-->
+    <div>div+css</div>
+    <div>div+css</div>
+
 </body>
 </html>
