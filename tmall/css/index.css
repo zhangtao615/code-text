@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    text-decoration: none;
+}
+#img{
+    height: 32px;
+    background: #f2f2f2;
+    line-height: 32px;
+    }
+
+.quick-menu {
+    list-style: none;
+
+}
+
+.top-img{
+    text-align: center;
+    background: #3b38d2;
+    height: 80px;
+}
+
+.quick-menu{
+    float: right;
+}
+.quick-menu > li{
+    float: left;
+    margin-left: 5px;
+    /*text-decoration: none;*/
+    display: block;
+
+}
+.login-info{
+    float: left;
+    margin: 0 14px;
+}
+/*.quick-menu > a:hover{*/
+    /*color: red;*/
+/*}*/
+
+.login-info a,.quick-menu a:hover{
+    color: red;
+}
+.login-info a,span,.quick-menu > li a{
+    color: #cccccc;
+    font-size: 14px;
+    /*background: #999999;*/
+}
+/*.login-info a,.quick-menu a:hover{*/
+    /*color: red;*/
+/*}*/
+.quick-menu >li i{
+    color: red;
+}
+
