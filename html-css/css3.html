@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1:hover{
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            margin: 100px;
+            transform: rotate(30deg);  /* 旋转 css3*/
+            transform-origin: 0 0;/*设置旋转圆心*/
+            /*transform: ;*/
+            -webkit-transform: rotate(30deg);  /*前缀支持Chrome Safari */
+            -moz-transform: rotate(30deg);  /*支持firefox */
+            -o-transform: rotate(30deg);  /*支持标准浏览器 */
+            /*!*transform: rotate(30deg);  !* *!*!*/
+            /*transition: transform;*/
+
+        }
+        /*.div1:hover{*/
+            /*transform: rotate(30deg);*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div2"></div>
+</div>
+</body>
+</html>

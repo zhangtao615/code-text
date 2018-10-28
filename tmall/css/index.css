@@ -2,15 +2,25 @@
     margin: 0px;
     text-decoration: none;
 }
+.wrapper{
+    width: 1230px;
+
+    height: 100%;
+    margin: 0 auto;
+}
 #img{
     height: 32px;
     background: #f2f2f2;
     line-height: 32px;
     }
 
-.quick-menu {
+.quick-menu >li{
+
     list-style: none;
 
+}
+.iconfont{
+    color: red;
 }
 
 .top-img{
@@ -21,34 +31,106 @@
 
 .quick-menu{
     float: right;
+    position: relative;
+}
+.split {
+    width: 1px;
+    height: 14px;
+    background: #ccc;
+    margin: 9px 0 0 14px;
+    padding: 0;
 }
 .quick-menu > li{
     float: left;
-    margin-left: 5px;
-    /*text-decoration: none;*/
-    display: block;
-
+    margin-right: 14px;
+    display: inline-block;
+    position: relative;
 }
 .login-info{
     float: left;
-    margin: 0 14px;
+    margin: 0 18px;
 }
-/*.quick-menu > a:hover{*/
-    /*color: red;*/
-/*}*/
-
-.login-info a,.quick-menu a:hover{
+.quick-menu:hover{
     color: red;
 }
-.login-info a,span,.quick-menu > li a{
+.login-info a:hover {
+    color: red;
+}
+
+
+.login-info a,span{
+    color: #bababa;
+    font-size: 12px;
+
+}
+.quick-menu  a{
     color: #cccccc;
-    font-size: 14px;
-    /*background: #999999;*/
+    font-size: 12px;
+
 }
-/*.login-info a,.quick-menu a:hover{*/
-    /*color: red;*/
-/*}*/
-.quick-menu >li i{
+
+.quick-menu a{
+
+    display:inline-block;
+}
+.triangle::after{
+    content:'' ;
+    width: 0;
+    border-width:3px;
+    border-style: dashed;
+    border-top-color:#bbb;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color:transparent;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+
+    cursor:pointer;
+    padding-top: -1.5px;
+    transition: all 1s ease;
+    display:block;
+}
+.quick-menu > li:hover a{
     color: red;
 }
 
+
+.triangle:hover::after{
+     -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+     -ms-transform: rotate(180deg);
+     -o-transform: rotate(180deg);
+     transform: rotate(180deg);
+
+
+    -webkit-transform-origin: 3px 1.5px;
+    -moz-transform-origin: 3px 1.5px;
+    -ms-transform-origin: 3px 1.5px;
+    -o-transform-origin: 3px 1.5px;
+    transform-origin: 3px 1.5px;
+
+
+}
+.sub-menu{
+    display: none;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    /*line-height: 20px;*/
+    font-size: 12px;
+    position: absolute;
+
+}
+.triangle:hover .sub-menu{
+    display:block;
+    color: red;
+    list-style: none;
+}
+.sub-menu:hover .my-taobao{
+    background: #f2f2f2;
+    color: red;
+
+
+
+
+}
