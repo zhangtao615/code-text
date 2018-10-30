@@ -1,56 +1,55 @@
 *{
     margin: 0px;
+    padding: 0;
     text-decoration: none;
-}
-.wrapper{
-    width: 1230px;
 
+
+}
+#wrapper{
+    width: 1230px;
     height: 100%;
     margin: 0 auto;
+    background: #ccc;
 }
 #img{
     height: 32px;
-    background: #f2f2f2;
     line-height: 32px;
+    color: #b8b8b8;
     }
 
-.quick-menu >li{
 
-    list-style: none;
-
-}
 .iconfont{
     color: red;
 }
 
-.top-img{
+#top-img{
     text-align: center;
     background: #3b38d2;
     height: 80px;
 }
 
-.quick-menu{
+#quick-menu{
     float: right;
-    position: relative;
 }
 .split {
     width: 1px;
     height: 14px;
-    background: #ccc;
+
     margin: 9px 0 0 14px;
-    padding: 0;
+    padding:0 !important;
 }
-.quick-menu > li{
+#quick-menu>li{
     float: left;
-    margin-right: 14px;
-    display: inline-block;
+    padding: 0 14px;
+    display: block;
+    list-style: none;
     position: relative;
 }
 .login-info{
     float: left;
     margin: 0 18px;
 }
-.quick-menu:hover{
+#quick-menu:hover{
     color: red;
 }
 .login-info a:hover {
@@ -59,20 +58,19 @@
 
 
 .login-info a,span{
-    color: #bababa;
+    color: #999;
     font-size: 12px;
+    margin: 8px;
+
 
 }
-.quick-menu  a{
-    color: #cccccc;
+#quick-menu a{
+    color: #999;
     font-size: 12px;
-
-}
-
-.quick-menu a{
-
     display:inline-block;
 }
+
+
 .triangle::after{
     content:'' ;
     width: 0;
@@ -84,15 +82,16 @@
     border-bottom-color:transparent;
     position: absolute;
     top: 50%;
-    right: -8px;
+    right: 4px;
 
     cursor:pointer;
     padding-top: -1.5px;
     transition: all 1s ease;
     display:block;
 }
-.quick-menu > li:hover a{
+#quick-menu > li:hover a{
     color: red;
+    cursor: pointer;
 }
 
 
@@ -110,27 +109,55 @@
     -o-transform-origin: 3px 1.5px;
     transform-origin: 3px 1.5px;
 
+    -webkit-transition: transform .5s ease;
+    -moz-transition: transform .5s ease;
+    -ms-transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
 
 }
-.sub-menu{
+.sub-menu {
     display: none;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    /*line-height: 20px;*/
+
+    /*background: #fff;*/
+    /*line-height: 32px;*/
     font-size: 12px;
     position: absolute;
-
-}
-.triangle:hover .sub-menu{
-    display:block;
-    color: red;
+    width: 76px;
     list-style: none;
+
+
 }
-.sub-menu:hover .my-taobao{
-    background: #f2f2f2;
+.my-taobao{
+    color: #000000;
+}
+#quick-menu .triangle:hover .sub-menu{
+    display:block;
+    /*background: #fff;*/
     color: red;
-
-
+    text-decoration: underline;!important;
 
 
 }
+.collect{
+    list-style: none;
+    font-size: 12px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    line-height: 32px;
+    width: 76px;
+}
+.sub-collect{
+    position: relative;
+}
+
+#quick-menu .triangle:hover .collect{
+    display:block;
+    /*background: #ffffff;*/
+    color: red;
+    text-decoration: underline;!important;
+}
+
+
+
