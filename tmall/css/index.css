@@ -1,15 +1,18 @@
 *{
     margin: 0px;
     padding: 0;
-    text-decoration: none;
+    /*text-decoration: none;*/
 
 
 }
 #wrapper{
-    width: 1230px;
-    height: 100%;
+    /*width: 1230px;*/
+
     margin: 0 auto;
-    background: #ccc;
+    background: #f2f2f2;
+    height: 32px;
+    line-height: 32px;
+
 }
 #img{
     height: 32px;
@@ -28,46 +31,45 @@
     height: 80px;
 }
 
-#quick-menu{
+.quick-menu{
     float: right;
+
 }
 .split {
     width: 1px;
     height: 14px;
-
     margin: 9px 0 0 14px;
     padding:0 !important;
+    background: #ccc;
 }
-#quick-menu>li{
+.quick-menu > li{
     float: left;
     padding: 0 14px;
-    display: block;
     list-style: none;
     position: relative;
 }
 .login-info{
     float: left;
     margin: 0 18px;
+
 }
-#quick-menu:hover{
-    color: red;
-}
+
 .login-info a:hover {
     color: red;
 }
-
-
 .login-info a,span{
     color: #999;
     font-size: 12px;
     margin: 8px;
-
+    text-decoration: none;
 
 }
-#quick-menu a{
+.quick-menu a{
     color: #999;
     font-size: 12px;
-    display:inline-block;
+    /*display:inline-block;*/
+    text-decoration: none;
+    /*position: absolute;*/
 }
 
 
@@ -83,13 +85,12 @@
     position: absolute;
     top: 50%;
     right: 4px;
-
     cursor:pointer;
     padding-top: -1.5px;
     transition: all 1s ease;
     display:block;
 }
-#quick-menu > li:hover a{
+.quick-menu .taobao:hover {
     color: red;
     cursor: pointer;
 }
@@ -115,14 +116,14 @@
     -o-transition: transform .5s ease;
     transition: transform .5s ease;
 
+
 }
 .sub-menu {
     display: none;
-
-    /*background: #fff;*/
-    /*line-height: 32px;*/
+    background: #fff;
+    line-height: 32px;
     font-size: 12px;
-    position: absolute;
+    position:absolute;
     width: 76px;
     list-style: none;
 
@@ -131,18 +132,30 @@
 .my-taobao{
     color: #000000;
 }
-#quick-menu .triangle:hover .sub-menu{
-    display:block;
-    /*background: #fff;*/
+.quick-menu .triangle:hover{
+     display:block;
+     background: #ffffff;
+     color: red;
+
+ }
+.quick-menu .triangle:hover .sub-menu{
+      display:block;
+      background: #fff;
+      color: red;
+
+  }
+.buy:hover a{
+    text-decoration: underline;
     color: red;
-    text-decoration: underline;!important;
-
-
+}
+ .sale:hover a{
+    text-decoration: underline;
+    color: red;
 }
 .collect{
+    display: none;
     list-style: none;
     font-size: 12px;
-    display: none;
     cursor: pointer;
     position: absolute;
     line-height: 32px;
@@ -150,14 +163,45 @@
 }
 .sub-collect{
     position: relative;
+    /
+
+
+}
+.triangle :hover {
+    color: red;
+}
+.quick-menu .triangle:hover .collect {
+    display:block;
+    background: #fff;
+    color: red;
+
 }
 
-#quick-menu .triangle:hover .collect{
-    display:block;
-    /*background: #ffffff;*/
+
+
+.treasure:hover a{
+    text-decoration: underline;
     color: red;
-    text-decoration: underline;!important;
+
 }
+.shop:hover a{
+    text-decoration: underline;
+    color: red;
+
+}
+
+
+
+.mobile{
+    width: 175px;
+    height: 175px;
+    background: #f2f2f2;
+    display: none;
+    position: relative;
+}
+/*.mobile:hover{*/
+    /*display: block;*/
+/*}*/
 
 
 
