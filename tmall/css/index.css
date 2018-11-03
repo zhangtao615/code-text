@@ -19,21 +19,17 @@
     line-height: 32px;
     color: #b8b8b8;
     }
-
-
 .iconfont{
     color: red;
 }
-
 #top-img{
     text-align: center;
     background: #3b38d2;
     height: 80px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30)
 }
-
 .quick-menu{
     float: right;
-
 }
 .split {
     width: 1px;
@@ -51,9 +47,8 @@
 .login-info{
     float: left;
     margin: 0 18px;
-
+    height: 32px;
 }
-
 .login-info a:hover {
     color: red;
 }
@@ -62,7 +57,6 @@
     font-size: 12px;
     margin: 8px;
     text-decoration: none;
-
 }
 .quick-menu a{
     color: #999;
@@ -71,8 +65,6 @@
     text-decoration: none;
     /*position: absolute;*/
 }
-
-
 .triangle::after{
     content:'' ;
     width: 0;
@@ -94,8 +86,6 @@
     color: red;
     cursor: pointer;
 }
-
-
 .triangle:hover::after{
      -webkit-transform: rotate(180deg);
      -moz-transform: rotate(180deg);
@@ -176,9 +166,6 @@
     color: red;
 
 }
-
-
-
 .treasure:hover a{
     text-decoration: underline;
     color: red;
@@ -189,9 +176,9 @@
     color: red;
 
 }
-
-
-
+/*.site-navigation{*/
+    /*margin-right: 8px;*/
+/*}*/
 .mobile{
     width: 175px;
     height: 175px;
@@ -199,9 +186,141 @@
     display: none;
     position: relative;
 }
-/*.mobile:hover{*/
-    /*display: block;*/
-/*}*/
+.triangle .shop-support{
+    list-style: none;
+    font-size: 12px;
+    position: absolute;
+    display: none;
+    padding-right: 14px;
+
+
+
+}
+.shop-support .merchant{
+    color: #000000;
+    font-size: 16px;
+}
+.triangle:hover .shop-support {
+    display: block;
+}
+.shop-support .business-center:hover a{
+    text-decoration: underline;
+}
+.shop-support .tmall-rules:hover a{
+    text-decoration: underline;
+
+}
+.shop-support .merchant-settledr:hover a{
+    text-decoration: underline;
+}
+.shop-support .operation-service:hover a{
+    text-decoration: underline;
+}
+.shop-support .merchants-qc:hover a{
+    text-decoration: underline;
+}
+.shop-support .merchants-tools:hover a{
+    text-decoration: underline;
+}
+.shop-support .tmall-thinkbank:hover a{
+    text-decoration: underline;
+}
+.shop-support .meow-word:hover a{
+    text-decoration: underline;
+}
+
+
+
+
+
+.top .doodle-hide{
+    float: left;
+}
+.hot-query a{
+    text-decoration: none;
+}
+.hot-query>li{
+    list-style: none;
+}
+#logo-search{
+    margin-top: 2px;
+}
+#logo{
+    float: left;
+}
+#search{
+    margin-left: 60px;
+    float: left;
+    margin-top: 38px;
+}
+
+#search form{
+    width: 625px;
+    height: 36px;
+    border: 2px solid #FF0036;
+
+}
+
+#search .search-ipt{
+    width: 493px;
+    height: 36px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+#search .search-btn{
+    width: 128px;
+    height: 36px;
+    background: #FF0036;
+    border: none;
+    outline: none;
+    float: right;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px;
+
+}
+
+#search .hot-query{
+    margin-top: 6px;
+}
+
+#search .hot{
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 12px;
+
+}
+
+#search .hot a{
+    color: #999;
+    font-size: 14px;
+}
+
+#search .hot-query-highlight a{
+    color: #FF0036;
+}
+.milk {
+    border-right: none!important;
+}
+
+
+#inner-con2{
+
+    list-style: none;
+}
+#inner-con2 a{
+    text-decoration: none;
+    float: left;
+}
+
+
+
+
+
+
 
 
 
