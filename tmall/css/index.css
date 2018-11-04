@@ -1,24 +1,27 @@
 *{
-    margin: 0px;
-    padding: 0;
-    /*text-decoration: none;*/
-
+    margin: 0;
+    padding: 0;text-decoration: none;
+    list-style: none;
 
 }
 #wrapper{
-    /*width: 1230px;*/
-
+    width: 1230px;
     margin: 0 auto;
     background: #f2f2f2;
     height: 32px;
     line-height: 32px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30)
 
 }
 #img{
     height: 32px;
     line-height: 32px;
     color: #b8b8b8;
-    }
+
+}
+
+
+
 .iconfont{
     color: red;
 }
@@ -26,7 +29,6 @@
     text-align: center;
     background: #3b38d2;
     height: 80px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30)
 }
 .quick-menu{
     float: right;
@@ -41,7 +43,6 @@
 .quick-menu > li{
     float: left;
     padding: 0 14px;
-    list-style: none;
     position: relative;
 }
 .login-info{
@@ -56,13 +57,10 @@
     color: #999;
     font-size: 12px;
     margin: 8px;
-    text-decoration: none;
 }
 .quick-menu a{
     color: #999;
     font-size: 12px;
-    /*display:inline-block;*/
-    text-decoration: none;
     /*position: absolute;*/
 }
 .triangle::after{
@@ -114,13 +112,19 @@
     line-height: 32px;
     font-size: 12px;
     position:absolute;
-    width: 76px;
+    width: 100px;
     list-style: none;
+    left: -1px;
 
 
 }
 .my-taobao{
     color: #000000;
+}
+.quick-menu .my-taobao a{
+    padding: 0 14px;
+    text-align: center;
+
 }
 .quick-menu .triangle:hover{
      display:block;
@@ -149,13 +153,16 @@
     cursor: pointer;
     position: absolute;
     line-height: 32px;
-    width: 76px;
+    width: 100px;
+    left: -1px;
 }
 .sub-collect{
     position: relative;
-    /
-
-
+    border: solid #f2f2f2;
+    border-width: 0 1px;
+}
+.collect .sub-collect a{
+    padding: 0 14px;
 }
 .triangle :hover {
     color: red;
@@ -243,7 +250,7 @@
     list-style: none;
 }
 #logo-search{
-    margin-top: 2px;
+    height: 133px;
 }
 #logo{
     float: left;
@@ -307,14 +314,159 @@
 }
 
 
-#inner-con2{
 
+
+
+
+
+
+
+
+#inner-con2{
+    height: 36px;
+    border-bottom: 1px solid #FF0036;
+    position: relative;
+    margin-top: -5px;
+}
+#inner-con2 .nav{
+    transform:translate(-100px)
+}
+#inner-con2 .nav > li{
     list-style: none;
+    line-height: 36px;
 }
 #inner-con2 a{
     text-decoration: none;
     float: left;
+    margin-left: 12px;
+    vertical-align: middle;
+    color: #333;
+    display: block;
+    height: 35px;
 }
+#inner-con2 .nav img{
+    width: 100px;
+    margin-top: 3px;
+}
+#inner-con2 .nav a:hover {
+    color: #FF0036;
+}
+
+
+
+
+
+
+
+#banner .big-banner{
+    text-align: center;
+}
+#banner .wrapper{
+    text-align: center;
+    background: #ff6c84;
+    position: relative;
+}
+
+#banner .category-tab{
+    position: absolute;
+    top: -36px;
+    left: 0;
+    width: 200px;
+    height: 500px;
+    background: rgba(0,0,0,.55);
+
+}
+#banner .category-item{
+    float: left;
+}
+
+#banner .category-item > a{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+}
+
+#banner .category li{
+    height: 36px;
+}
+
+#banner .category{
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 200px;
+}
+
+#banner .category-item:hover .category{
+    display: block;
+}
+
+#banner .item1{
+    width: 100px;
+    color: #FF0036;
+    background: rgba(238,238,238,.95);
+}
+
+#banner .item2{
+    background: #FF0036;
+    color: #ffe013;
+    width: 100px;
+}
+
+#banner .category a{
+    color: #fff;
+}
+
+#banner .category2 li{
+    width: 152px;
+    height: 31px;
+    border: 1px solid #FF0036;
+    border-radius: 10px;
+    line-height: 31px;
+    margin: 20px auto
+}
+
+#banner .small-banner{
+    width: 220px;
+    height: 235px;
+    background: rgba(255,255,255,.7);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#banner .slider-nav li{
+    width: 25px;
+    height: 5px;
+    background: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#banner .slider-nav{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 30px;
+}
+#banner .category-item .icon-nvzhuang{
+    color: #f2f2f2;
+    font-size: 12px;
+}
+#banner .category-item li:hover {
+    background: #FF0036;
+}
+
+
+
+
+
+
+
 
 
 
