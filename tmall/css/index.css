@@ -468,6 +468,25 @@
 
 
 
+#sider-bar{
+    width: 35px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    position: fixed;
+
+}
+#sider-bar .font{
+    color: white;
+}
+
+
+
+
+
+
+
 
 
 
