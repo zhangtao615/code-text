@@ -477,9 +477,95 @@
     position: fixed;
 
 }
-#sider-bar .font{
+#sider-bar div{
+    color: white!important;
+    font-size: 14px;
+    padding-top: 40px;
+    margin-top: 25px;
+    position: relative;
+    width: 35px;
+}
+#sider-bar i {
+    color: white!important;
+    margin-left: 8px;
+    font-size: 18px;
+}
+#sider-bar .ziyuan{
+    width: 16px;
+    height: 36px;
+    font-size: 10px;
+    margin-left: 8px;
+    position: absolute;
+    transform:translate(5px,-60px)
+
+
+}
+#sider-bar .bar:hover {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#brand-list{
+    height: 2000px;
+    width: 100%;
+}
+#brand-list .brand img  {
+    width: 122px;
+    height: 90px;
+}
+#brand-list .brand{
+    text-align: center;
+    position: relative;
+    float: left;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+#brand-list .brand .brand-mask{
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#brand-list .brand:hover .brand-mask{
+    opacity: 1;
+}
+#brand-list .brand-mask .coupon{
+    margin-top: 30px;
+
+}
+#brand-list .brand-mask p{
     color: white;
 }
+
+#brand-list .brand-mask .enter{
+    width: 80px;
+    height: 18px;
+    line-height: 18px ;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    margin: 0 auto;
+    background: #FF0036;
+}
+
 
 
 
