@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--使用setTimeout模拟setInterval-->
+<script>
+    function f(interval) {
+        console.log(1);
+        setTimeout(f(interval),1000);
+
+    }
+    f();
+</script>
+</body>
+</html>
