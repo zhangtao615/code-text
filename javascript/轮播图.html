@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 500px;
+            height: 270px;
+            border: 1px solid;
+            margin: 100px auto;
+
+        }
+
+        #menu {
+            height: 30px;
+            width: 150px;
+            position: absolute;
+        }
+
+        #menu div {
+            width: 30px;
+            height: 30px;
+            background: rgb(97, 84, 84);
+            color: aliceblue;
+            cursor: pointer;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 3px;
+            z-index: 999;
+            position: relative;
+            bottom: -230px;
+            right: -360px;
+        }
+
+        #menu .sub-menu {
+            background-color: rgb(172, 37, 37);
+        }
+
+        #picture img {
+            width: 500px;
+            display: none;
+        }
+
+        #picture .sub-picture {
+            display: block;
+        }
+        /* #click{
+            position: relative;
+           height: 100%;
+            
+        }
+        #click div{
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            margin-left: 4px;
+            z-index: 999;
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="menu">
+            <div class="sub-menu">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div id="picture">
+            <img class="sub-picture" src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <!-- <div id="click">
+            <div>&lt;</div>
+            <div>&gt;</div>
+        </div> -->
+
+    </div>
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aDiv = oMenu.getElementsByTagName('div');
+        var oPicture = document.getElementById('picture');
+        var aImg = oPicture.getElementsByTagName('img');
+        // var iNOWIndex = 0;
+
+
+
+        for (var i = 0; i < aDiv.length; i++) {
+            aDiv[i].index = i;
+
+            aDiv[i].onmouseover = function () {
+
+                for (var j = 0; j < aDiv.length; j++) {
+                    aDiv[j].className = '';
+                    aImg[j].className = '';
+                }
+                this.className = 'sub-menu';
+                aImg[this.index].className = 'sub-picture';
+            };
+           
+              
+            //     setInterval(function () {
+            //        iNOWIndex++;
+            //        if(iNOWIndex == aDiv.length){
+            //             iNOWIndex ==0;
+            //        }
+            //        iNOWIndex();
+            //     }, 500);
+            //     changeImg();
+            // }
+            // changeImg();
+        }
+          </script>
+</body>
+
+</html>

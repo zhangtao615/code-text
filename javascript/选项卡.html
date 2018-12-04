@@ -2,87 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
     <style>
-        *{
-            padding: 0;
+        * {
             margin: 0;
-            list-style: none;
+            padding: 0;
         }
+
         #container {
             width: 400px;
             height: 300px;
             border: 1px solid;
             margin: 100px auto;
         }
-        #menu{
 
+        #tab {
             height: 30px;
-            border-bottom: 1px solid;
+            border-bottom: 1px solid #000;
         }
-        #menu li{
-            width: 100px;
+
+        #tab li {
+            width: 120px;
             height: 30px;
+            background: #cccccc;
             float: left;
+            list-style: none;
             text-align: center;
             line-height: 30px;
-            margin-left: 10px;
-            background: #ccc;
-            /*display: none;*/
+            margin-right: 5px;
             cursor: pointer;
         }
-        #tab div{
-            display: none;
-        }
-        #tab .sub-tab{
-            display: block;
-        }
-        #menu .sub-menu{
+
+        #tab .tab-selected {
             background: #000000;
             color: #fff;
-        }
-        #tab{
-            display: block;
-        }
-        #tab .sub-tab{
-            display: block;
+
         }
 
-    </style>
+        #content div {
+            display: none;
+        }
+
+        #content .content-selected {
+            display: block;
+        }
+        </style>
 </head>
 <body>
 <div id="container">
-    <ul id="menu">
-        <li class="sub-menu">html</li>
+    <ul id="tab">
+        <li class="tab-selected">html</li>
         <li>css</li>
         <li>javascript</li>
     </ul>
-    <div id="tab">
-        <div class="sub-tab">001</div>
-        <div>002</div>
-        <div>003</div>
+    <div id="content">
+        <div class="content-selected">abc</div>
+        <div>efg</div>
+        <div>asdfasf</div>
     </div>
 </div>
+
 <script>
-    var oMenu = document .getElementById('menu');
-    var aLi =oMenu.getElementsByTagName('li');
     var oTab = document.getElementById('tab');
-    var aDiv = oTab.getElementsByTagName('div');
+    var aLi = oTab.getElementsByTagName('li');
+    var oContent = document.getElementById('content');
+    var aDiv = oContent.getElementsByTagName('div');
 
-    for (var i= 0;i< aLi.length;i++) {
-        aLi[i].index=i;
-        aLi[i].onclick=function () {
-            for (var j=0;j<aLi.length;j++) {
-                aLi[j].className='';
-                aDiv[j].className='';
-            }
-            this.className='sub-menu';
-            aDiv[this.index].className='sub-tab';
-
+  for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i; 
+           
+            aLi[i].onclick = function () {
+                
+                for (var j = 0; j < aLi.length; j++) {
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                this.className = 'tab-selected';
+                aDiv[this.index].className = 'content-selected'; 
+            };
         }
-    }
+
+
 </script>
+
 </body>
 </html>

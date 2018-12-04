@@ -38,8 +38,8 @@
     <li>菜单4</li>
 </ul>
 <script>
-   let oMenu =  document.getElementById('menu');
-   let aLi = oMenu.getElementsByTagName('li');
+   var oMenu =  document.getElementById('menu');
+   var aLi = oMenu.getElementsByTagName('li');
     document.oncontextmenu = function (e) {
         e= e || window.event;
         oMenu.style.display='block';
@@ -50,12 +50,12 @@
     document.onclick = function () {
         oMenu.style.display = 'none';
     };
-    for (let i=0;i< aLi.length;i++) {
-        aLi[i].onclick =function () {
+    for (var i=0;i< aLi.length;i++) {
+        aLi[i].onclick = function () {
             alert(this.innerHTML)
         }
     }
-
+    
 </script>
 </body>
 </html>
