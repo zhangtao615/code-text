@@ -54,25 +54,27 @@
         #picture .sub-picture {
             display: block;
         }
-        /* #click{
-            position: relative;
-           height: 100%;
-            
+
+        #arrow {
+            height: 30px;
+            transform: translate(25px, -40px);
+            -ms-transform: translate(25px, -40px);
+            -webkit-transform: translate(25px, -40px);
+            -o-transform: translate(25px, -40px);
+            -moz-transform: translate(25px, -40px);
         }
-        #click div{
-            width: 20px;
-            height: 20px;
+
+        #arrow div {
+            width: 30px;
+            height: 30px;
             background-color: #ccc;
             float: left;
             text-align: center;
-            line-height: 20px;
+            line-height: 30px;
             cursor: pointer;
-            margin-left: 4px;
-            z-index: 999;
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-        } */
+            margin-left: 3px;
+
+        }
     </style>
 </head>
 
@@ -90,10 +92,10 @@
             <img src="img/3.jpg" alt="">
             <img src="img/4.jpg" alt="">
         </div>
-        <!-- <div id="click">
-            <div>&lt;</div>
-            <div>&gt;</div>
-        </div> -->
+        <div id="arrow">
+            <div class="preve">&lt;</div>
+            <div class="next">&gt;</div>
+        </div>
 
     </div>
     <script>
@@ -101,15 +103,17 @@
         var aDiv = oMenu.getElementsByTagName('div');
         var oPicture = document.getElementById('picture');
         var aImg = oPicture.getElementsByTagName('img');
-        // var iNOWIndex = 0;
 
-
+        var oArrow = document.getElementById('arrow');
+        var oPreve = oArrow.getElementsByClassName('preve');
+        var oNext = oArrow.getElementsByClassName('next');
+        var iNowIndex = 0;
 
         for (var i = 0; i < aDiv.length; i++) {
             aDiv[i].index = i;
 
             aDiv[i].onmouseover = function () {
-
+                iNowIndex = this.index;
                 for (var j = 0; j < aDiv.length; j++) {
                     aDiv[j].className = '';
                     aImg[j].className = '';
@@ -117,20 +121,32 @@
                 this.className = 'sub-menu';
                 aImg[this.index].className = 'sub-picture';
             };
-           
-              
-            //     setInterval(function () {
-            //        iNOWIndex++;
-            //        if(iNOWIndex == aDiv.length){
-            //             iNOWIndex ==0;
-            //        }
-            //        iNOWIndex();
-            //     }, 500);
-            //     changeImg();
-            // }
-            // changeImg();
         }
-          </script>
+        oPreve.onclick = function () {
+            iNowIndex--;
+            if (iNowIndex == -1) {
+                iNowIndex = aDiv.length - 1;
+            }
+            for (var i = 0; i < aDiv.length; i++) {
+                aDiv[i].className = '';
+                aImg[i].className = '';
+            }
+            aDiv[iNowIndex].className = 'sub-menu';
+            aImg[iNowIndex].className = 'sub-picture';
+        };
+        oNext.onclick = function () {
+            iNowIndex++;
+            if (iNowIndex == aDiv.length) {
+                iNowIndex = 0;
+            }
+            for (var i = 0; i < aDiv.length; i++) {
+                aDiv[i].className = '';
+                aImg[i].className = '';
+            }
+            aDiv[iNowIndex].className = 'sub-menu';
+            aImg[iNowIndex].className = 'sub-picture';
+        };
+    </script>
 </body>
 
 </html>
