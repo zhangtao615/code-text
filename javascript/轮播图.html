@@ -46,12 +46,12 @@
             background-color: rgb(172, 37, 37);
         }
 
-        #picture img {
+        #imgs img {
             width: 500px;
             display: none;
         }
 
-        #picture .sub-picture {
+        #imgs .sub-imgs {
             display: block;
         }
 
@@ -67,13 +67,13 @@
         #arrow div {
             width: 30px;
             height: 30px;
-            background-color: #ccc;
+            background-color: rgb(97, 84, 84);
             float: left;
             text-align: center;
             line-height: 30px;
             cursor: pointer;
             margin-left: 3px;
-
+            color: aliceblue;
         }
     </style>
 </head>
@@ -86,65 +86,61 @@
             <div>3</div>
             <div>4</div>
         </div>
-        <div id="picture">
-            <img class="sub-picture" src="img/1.jpg" alt="">
+        <div id="imgs">
+            <img class="sub-imgs" src="img/1.jpg" alt="">
             <img src="img/2.jpg" alt="">
             <img src="img/3.jpg" alt="">
             <img src="img/4.jpg" alt="">
         </div>
         <div id="arrow">
-            <div class="preve">&lt;</div>
-            <div class="next">&gt;</div>
+            <div id="preve">&lt;</div>
+            <div id="next">&gt;</div>
         </div>
 
     </div>
     <script>
         var oMenu = document.getElementById('menu');
         var aDiv = oMenu.getElementsByTagName('div');
-        var oPicture = document.getElementById('picture');
-        var aImg = oPicture.getElementsByTagName('img');
-
-        var oArrow = document.getElementById('arrow');
-        var oPreve = oArrow.getElementsByClassName('preve');
-        var oNext = oArrow.getElementsByClassName('next');
+        var oImgs = document.getElementById('imgs');
+        var aImg = oImgs.getElementsByTagName('img');
+        // var oArrow = document.getElementById('arrow');
+        var aPreve = document.getElementById('preve');
+        var aNext = document.getElementById('next');
         var iNowIndex = 0;
 
         for (var i = 0; i < aDiv.length; i++) {
             aDiv[i].index = i;
-
+           
             aDiv[i].onmouseover = function () {
                 iNowIndex = this.index;
-                for (var j = 0; j < aDiv.length; j++) {
-                    aDiv[j].className = '';
-                    aImg[j].className = '';
-                }
-                this.className = 'sub-menu';
-                aImg[this.index].className = 'sub-picture';
+                changeImgs()
+                
             };
         }
-        oPreve.onclick = function () {
+        aPreve.onclick = function () {
             iNowIndex--;
             if (iNowIndex == -1) {
-                iNowIndex = aDiv.length - 1;
+                iNowIndex = aDiv.length - 1; 
             }
-            for (var i = 0; i < aDiv.length; i++) {
-                aDiv[i].className = '';
-                aImg[i].className = '';
-            }
-            aDiv[iNowIndex].className = 'sub-menu';
-            aImg[iNowIndex].className = 'sub-picture';
+            changeImgs()
         };
-        oNext.onclick = function () {
+        aNext.onclick = function () {
             iNowIndex++;
             if (iNowIndex == aDiv.length) {
                 iNowIndex = 0;
             }
+            changeImgs()
+        };
+        setInterval(function(){
+              aNext.onclick()
+        },1000);
+        function changeImgs(){
             for (var i = 0; i < aDiv.length; i++) {
                 aDiv[i].className = '';
                 aImg[i].className = '';
             }
             aDiv[iNowIndex].className = 'sub-menu';
-            aImg[iNowIndex].className = 'sub-picture';
+            aImg[iNowIndex].className = 'sub-imgs';
         };
     </script>
 </body>
