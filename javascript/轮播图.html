@@ -13,11 +13,11 @@
         }
 
         #container {
-            width: 500px;
-            height: 270px;
+            width: 520px;
+            height: 280px;
             border: 1px solid;
             margin: 100px auto;
-
+            cursor: pointer;
         }
 
         #menu {
@@ -47,7 +47,6 @@
         }
 
         #imgs img {
-            width: 500px;
             display: none;
         }
 
@@ -103,38 +102,52 @@
         var aDiv = oMenu.getElementsByTagName('div');
         var oImgs = document.getElementById('imgs');
         var aImg = oImgs.getElementsByTagName('img');
-        // var oArrow = document.getElementById('arrow');
         var aPreve = document.getElementById('preve');
         var aNext = document.getElementById('next');
+        var oContainer = document.getElementById('container');
         var iNowIndex = 0;
+        var timer = null;
 
         for (var i = 0; i < aDiv.length; i++) {
             aDiv[i].index = i;
-           
+
             aDiv[i].onmouseover = function () {
                 iNowIndex = this.index;
-                changeImgs()
-                
+                changeImgs();
             };
         }
         aPreve.onclick = function () {
             iNowIndex--;
             if (iNowIndex == -1) {
-                iNowIndex = aDiv.length - 1; 
+                iNowIndex = aDiv.length - 1;
             }
-            changeImgs()
+            changeImgs();
         };
         aNext.onclick = function () {
             iNowIndex++;
             if (iNowIndex == aDiv.length) {
                 iNowIndex = 0;
             }
-            changeImgs()
+            changeImgs();
         };
-        setInterval(function(){
-              aNext.onclick()
-        },1000);
-        function changeImgs(){
+        play();
+        oContainer.onmouseover = function () {
+            clearInterval(timer);
+        };
+        oContainer.onmouseout = function () {
+            play();
+        }
+        oMenu.onselectstart = aPreve.onselectstart = aNext.onselectstart = function () {
+            return false;
+        }
+
+        function play() {
+            timer = setInterval(function () {
+                aNext.onclick()
+            },1000);
+        }
+
+        function changeImgs() {
             for (var i = 0; i < aDiv.length; i++) {
                 aDiv[i].className = '';
                 aImg[i].className = '';
