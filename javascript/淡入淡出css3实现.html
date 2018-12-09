@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav li {
+            list-style: none;
+        }
+
+        #imgs {
+            position: relative;
+            
+        }
+
+        #imgs .banner {
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            width: 100%;
+            text-align: center;
+            transition: 1s all ease;
+        }
+
+        #imgs .banner1 {
+            background-color: #e8e8e8;
+
+        }
+
+        #imgs .banner2 {
+            background-color: #1d3cbc;
+        }
+
+        #imgs .banner3 {
+            background-color: #dc2d32;
+        }
+
+        #container {
+            position: relative;
+            height: 500px;
+        }
+
+        #nav {
+            float: left;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+
+        }
+
+        #nav li {
+            width: 25px;
+            height: 5px;
+            margin-right: 8px;
+            background-color: #000;
+            opacity: .3;
+            filter: opacity(30);
+            float: left;
+            cursor: pointer;
+        }
+
+        #nav .selected{
+            background-color: #fff;
+            opacity: .6;
+            filter: opacity(60);
+        }
+
+        #imgs .banner.actived {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="imgs">
+            <div class="banner banner1 actived">
+                <img src="https://img.alicdn.com/simba/img/TB1xIQMvH5YBuNjSspoSuveNFXa.jpg" alt="">
+            </div>
+            <div class="banner banner2">
+                <img src="http://img.alicdn.com/imgextra/i1/114/TB2wYu7c8cXBuNjt_XoXXXIwFXa_!!114-0-luban.jpg_q100.jpg_.webp"
+                    alt="">
+            </div>
+            <div class="banner banner3">
+                <img src="http://img.alicdn.com/tps/i4/TB17ITUFuuSBuNjSsplSuve8pXa.jpg" alt="">
+            </div>
+
+
+        </div>
+        <div id="nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+        </div>
+    </div>
+</body>
+<script>
+    var oNav = document.getElementById('nav');
+    var aLi = oNav.getElementsByTagName('li');
+    var oImgs = document.getElementById('imgs');
+    var aBanner = oImgs.getElementsByClassName('banner');
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index = i;
+        aLi[i].onmouseover = function () {
+            for (j = 0; j < aLi.length; j++) {
+                aLi[j].className = '';
+                aBanner[j].className = 'banner banner' + (j + 1);
+            }
+            this.className ='selected';
+            aBanner[this.index].className +=' actived'
+        }
+    }
+</script>
+ 
+</html>

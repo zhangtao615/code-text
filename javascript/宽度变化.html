@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #bar {
+            width: 100px;
+            height: 30px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bar"></div>
+    <script>
+        var oBar = document.getElementById('bar');
+        var timer =0;
+        oBar.onmouseover = function () {
+            clearTimeout(timer);
+             timer= setInterval(function () {
+             oBar.style.width = oBar.offsetWidth + 10 + 'px'
+                },16.7);
+            }
+        oBar.onmouseout =function(){
+            clearTimeout(timer);
+            if(oBar.offsetWidth>=oBar.width){
+                 setInterval(function () {
+             oBar.style.width = oBar.offsetWidth - 10 + 'px'
+                },16.7);
+            }
+           
+        }
+            
+        
+    </script>
+</body>
+
+</html>

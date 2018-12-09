@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        #bar {
+            width: 800px;
+            height: 100px;
+
+            position: relative;
+        }
+
+        #bar div {
+            width: 80px;
+            height: 80px;
+            color: #fff;
+            background-color: #000;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 80px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        #nav div:first-child {
+            margin: 0;
+        }
+
+        #nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #nav div {
+            width: 50px;
+            height: 30px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="bar">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div id="nav">
+            <div id="left">向左</div>
+            <div id="right">向右</div>
+        </div>
+    </div>
+    <script>
+        var oBar = document.getElementById('bar');
+        var oDiv = oBar.getElementsByTagName('div');
+        var oLeft = document.getElementById('left');
+        var oRight = document.getElementById('right');
+        var speed = 10;
+        setInterval(function () {
+            oBar.style.left = oBar.offsetLeft - speed + 'px';
+            if (-oBar.offsetLeft >= oBar.offsetWidth / 2) {
+                oBar.style.left = 0;
+            };
+            if (oBar.offsetLeft > 0) {
+                oBar.style.left = -oBar.offsetWidth / 2 + 'px';
+            };
+        }, 50);
+        oLeft.onmousemove = function () {
+            speed = 10
+        }
+        oRight.onmousemove = function () {
+            speed = -10;
+        }
+    </script>
+</body>
+
+</html>
