@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -32,6 +33,7 @@
             margin-right: 5px;
             cursor: pointer;
         }
+
         #tab .selected {
             background: #000000;
             color: #fff;
@@ -45,29 +47,31 @@
         #content .selected {
             display: block;
         }
-        </style>
+    </style>
 </head>
-<body>
-<div id="container">
-    <ul id="tab">
-        <li class="selected">html</li>
-        <li>css</li>
-        <li>javascript</li>
-    </ul>
-    <div id="content">
-        <div class="selected">abc</div>
-        <div>efg</div>
-        <div>asdfasf</div>
-    </div>
-</div>
-<script src="../JQuery/jquery-3.3.1.min.js"></script>
-<script>
-$("#tab li").click(function(){
-    $(this).addClass("selected").siblings().removeClass("selected");
-    $(".content ul:eq("+$(this).index()+")").addClass("selected ").siblings().removeClass("selected ");
-})
 
-</script>
+<body>
+    <div id="container">
+        <ul id="tab">
+            <li class="selected">html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+        <div id="content">
+            <div class="selected">abc</div>
+            <div>efg</div>
+            <div>asdfasf</div>
+        </div>
+    </div>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <script>s
+        $("#tab li").click(function () {
+            $(this).addClass("selected").siblings().removeClass("selected");
+            $(".content ul:eq(" + $(this).index() + ")").addClass("selected ").siblings().removeClass(
+                "selected ");
+        })
+    </script>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +16,22 @@
         }
     </style>
 </head>
+
 <body>
     <input type="text" value="张三">
     <script src="./jquery-3.3.1.min.js"></script>
-   <script>
-   $("input").focus(function(){
-       if(this.value==this.defaultValue){
-           this.value="";
-       }
-    $(this).addClass("active");
-   })
-   $("input").blur(function(){
-    $(this).removeClass("active");
-    $(this).val(this.value == ""?this.defaultValue:this.value)
-   })
-   </script>
+    <script>
+        $("input").focus(function () {
+            if (this.value == this.defaultValue) {
+                this.value = "";
+            }
+            $(this).addClass("active");
+        })
+        $("input").blur(function () {
+            $(this).removeClass("active");
+            $(this).val(this.value == "" ? this.defaultValue : this.value)
+        })
+    </script>
 </body>
+
 </html>

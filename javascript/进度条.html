@@ -30,11 +30,12 @@
         var oProgress = document.getElementById('progress');
         var oBar = document.getElementById('bar');
         var step = 0;
-        function run(){
+
+        function run() {
             step++;
             oBar.style.width = step + '%';
             oBar.innerHTML = step + '%';
-            if(oBar.offsetWidth < oProgress.offsetWidth){
+            if (oBar.offsetWidth < oProgress.offsetWidth) {
                 requestAnimationFrame(run);
             }
         }

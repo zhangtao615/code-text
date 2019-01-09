@@ -15,18 +15,18 @@
 </head>
 
 <body>
- 
-        <span>
-            <input type="checkbox">足球
-            <input type="checkbox">排球
-            <input type="checkbox">篮球
-            <input type="checkbox">羽毛球
-        </span>
-        <div>
-            <button id="check-all">全选</button>
-            <button id="select-none">全不选</button>
-            <button id="invert-select">反选</button>
-        </div>
+    <h1><em>你喜欢运动吗？</em></h1>
+    <span>
+        <input type="checkbox">足球
+        <input type="checkbox">排球
+        <input type="checkbox">篮球
+        <input type="checkbox">羽毛球
+    </span>
+    <div>
+        <button id="check-all">全选</button>
+        <button id="select-none">全不选</button>
+        <button id="invert-select">反选</button>
+    </div>
 
 
 
@@ -38,16 +38,15 @@
             $('input').prop('checked', 'checked');
         });
         $('#invert-select').click(function () {
-           var allCheck=$("input")
-           allCheck.each(function(index,ele){
-               if($(ele).prop('checked')){
-                $(ele).prop('checked',false);
-               }else{
-                $(ele).prop('checked',true);
-               }
-           })
+            var allCheck = $("input")
+            allCheck.each(function (index, ele) {
+                if ($(ele).prop('checked')) {
+                    $(ele).prop('checked', false);
+                } else {
+                    $(ele).prop('checked', true);
+                }
+            })
         });
-        
     </script>
 </body>
 

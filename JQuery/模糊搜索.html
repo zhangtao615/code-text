@@ -34,7 +34,7 @@
         <li>性别</li>
         <li>暂住地</li>
     </ul>
-    <ul id="cut-rule">-------------------------------------------------</ul>
+    <ul>-------------------------------------------------</ul>
     <ul id="infor">
         <ul>
             <li>张山</li>
@@ -70,9 +70,10 @@
     <script>
         $("#put").keyup(function () {
             var thisVal = this.value;
-            // $("#infor ul").hide();
-            // $("#infor ul:contains("+thisVal+")").show();
-            $("#infor ul").hide().filter(":contains("+thisVal+")").show();
+            $("#infor ul").hide();
+            $("#infor ul:contains(" + thisVal + ")").show();
+            // $("#infor ul").hide().filter(":contains("+thisVal+")").show();
+
         });
     </script>
 </body>
