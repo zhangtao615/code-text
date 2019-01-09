@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #imgs {
+            width: 1000px;
+            height: 500px;
+            position: relative;
+        }
+
+        #imgs div {
+            float: left;
+        }
+
+        #tag {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            opacity: .4;
+            position: absolute;
+            display: none;
+            z-index: 999;
+        }
+
+        #big {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            margin-left: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+   
+        <div id="imgs">
+            <div id="small">
+                <img src="放大镜/1.jpg" alt="">
+            </div>
+            <div id="big">
+                <img src="放大镜/2.jpg" alt="">
+            </div>
+            <div id="tag"></div>
+        </div>
+
+        
+    <script>
+        var oImgs = document.getElementById('imgs');
+        var aSmall = document.getElementById('small');
+        var aBig = document.getElementById('big');
+        var aTag = document.getElementById('tag');
+        aSmall.onmouseover = function () {
+            aTag.style.display = 'block';
+            aBig.style.display = 'block';
+            console.log('aSmall.onmouseover')
+        };
+        aSmall.onmousemove = function (e) {
+            e = e || window.event;
+            var left = e.clientX-aTag.offsetWidth / 2;
+            var top= e.clientY-aTag.offsetHeight / 2;
+            aTag.style.top = top + 'px';
+            aTag.style.left = left + 'px';
+            console.log('aSmall.onmousemove')
+        }
+        aSmall.onmousuout = function () {
+            aTag.style.display = 'none';
+            aBig.style.display = 'none';
+            console.log('aSmall.onmousuout')
+        }
+    </script>
+</body>
+
+</html>

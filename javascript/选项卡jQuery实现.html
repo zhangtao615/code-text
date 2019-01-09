@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            margin: 100px auto;
+        }
+
+        #tab {
+            height: 30px;
+            border-bottom: 1px solid #000;
+        }
+
+        #tab li {
+            width: 120px;
+            height: 30px;
+            background: #cccccc;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #tab .selected {
+            background: #000000;
+            color: #fff;
+
+        }
+
+        #content div {
+            display: none;
+        }
+
+        #content .selected {
+            display: block;
+        }
+        </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tab">
+        <li class="selected">html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <div id="content">
+        <div class="selected">abc</div>
+        <div>efg</div>
+        <div>asdfasf</div>
+    </div>
+</div>
+<script src="../JQuery/jquery-3.3.1.min.js"></script>
+<script>
+$("#tab li").click(function(){
+    $(this).addClass("selected").siblings().removeClass("selected");
+    $(".content ul:eq("+$(this).index()+")").addClass("selected ").siblings().removeClass("selected ");
+})
+
+</script>
+
+</body>
+</html>

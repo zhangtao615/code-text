@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+   #head{
+       height: 23px;
+   }
+    ul li{
+        margin-right: 100px;
+        float: left;
+    }
+    #infor{
+        height: 23px;
+         width: 500px;
+    }
+    </style>
+</head>
+
+<body>
+    筛选：<input type="text" id="put">
+    <ul id="head">
+        <li>姓名</li>
+        <li>性别</li>
+        <li>暂住地</li>
+    </ul>
+    <ul id="cut-rule">-------------------------------------------------</ul>
+    <ul id="infor">
+        <ul>
+            <li>张山</li>
+            <li>男</li>
+            <li>浙江宁波</li>
+        </ul>
+        <ul>
+            <li>李四</li>
+            <li>女</li>
+            <li>浙江杭州</li>
+        </ul>
+        <ul>
+            <li>王五</li>
+            <li>男</li>
+            <li>湖南长沙</li>
+        </ul>
+        <ul>
+            <li>赵六</li>
+            <li>男</li>
+            <li>浙江温州</li>
+        </ul>
+        <ul>
+            <li>Rain</li>
+            <li>男</li>
+            <li>浙江杭州</li>
+        </ul>
+        <ul>
+            <li>李四</li>
+            <li>男</li>
+            <li>湖南长沙</li>
+        </ul>
+    </ul>
+    <script>
+        $("#put").keyup(function () {
+            var thisVal = this.value;
+            // $("#infor ul").hide();
+            // $("#infor ul:contains("+thisVal+")").show();
+            $("#infor ul").hide().filter(":contains("+thisVal+")").show();
+        });
+    </script>
+</body>
+
+</html>
