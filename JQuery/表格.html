@@ -57,7 +57,6 @@
             <tr>
                 <td>4</td>
                 <td class="editable">赵六</td>
-                
             </tr>
         </tbody>
     </table>
@@ -73,18 +72,15 @@
           thisInp.focus();
         }
       })
-
       $(".editable").focusout(function(){
         var thisVal = $(this).children("input").val();
         $(this).text(thisVal);
       })
-
       $(".editable").keydown(function(e){
         if(e.which == 13){
           $(this).trigger("focusout");
         }
       })
-
     </script>
 </body>
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #a {
+            background-color: blueviolet;
+        }
+
+        #b {
+            background-color: green;
+        }
+
+        #c {
+            background-color: #ccc;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        #nav a {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">1</div>
+    <div id="b">2</div>
+    <div id="c">3</div>
+    <ul id="nav">
+        <a href="#a">box1</a>
+        <a href="#b">box2</a>
+        <a href="#c">box3</a>
+    </ul>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script>
+        $("a").click(function () {
+            var thisHas = $(this).attr("href").slice(1);
+            $("html,body").animate({
+                scrollTop: $("#" + thisHas).offset().top
+            }, 500, function () {
+                $("div:target").css({
+                    fontSize: 100,
+                    color: 'red'
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>
