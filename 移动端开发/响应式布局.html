@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       *{
+      margin:0;
+      padding:0;
+    }
+    .container{
+      max-width: 960px;
+      margin: 0 auto
+    }
+    .header,.nav,.footer{
+      width: 100%;
+      font-size: 25px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      background-color: #8c8c8c;
+      margin-bottom: 10px;
+    }
+    .pic{
+      width: 100%;
+    }
+    .pic img{
+      width: 100%;
+      display: block;
+    }
+    .essay{
+      margin-bottom: 10px;
+
+    }
+    .essay .right{
+      float: right;
+      width: 30%;
+      background-color: red;
+      min-height: 300px;
+    }
+    .essay .left{
+      float:left;
+      width: 65%;
+      min-height: 300px;
+      background-color: blue;
+    }
+    .essay div{
+      display: table
+    }
+    .essay p{
+      text-align: center;
+     display: table-cell;
+     vertical-align: middle;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    @media (max-width:600px){
+      .container .essay div{
+        width: 100%;
+        margin-top:10px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">页头</div>
+        <div class="nav">导航</div>
+        <div class="pic"><img src="./响应式布局.jpg" alt=""></div>
+        <div class="essay clearfix">
+            <div class="left">
+                <p>
+                    有道云笔记是用于管理知识与笔记文档的应用。使用有道云笔记你可以：用这些方式记录你的灵感新建一篇笔记，用图文编辑与丰富的文本格式记录所想；不方便打字时，用语音速记可同时保存语音和文字笔记；用扫描将文档、书籍、图片内容永久保存，还可使用OCR识别，提取其中文字内容；导入word直接编辑、上传Office文档备份同步；还有手写笔记、Markdown格式等方式，可根据记录时的需要选择。
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    在Windows、Mac、iPhone、Android、iPad上下载安装有道云笔记软件，打开浏览器进入有道云笔记官网编辑，或微信关注有道云笔记(ID:youdaonote)，在不同平台登录使用。在手机上随手记录的灵感可以在电脑端编辑、分类整理；电脑上记录的内容可以在手机端随时查看。收藏互联网超过90%的内容在微信、微博、知乎等App内看到好内容，可以一键发送至有道云笔记保存。其他内容，复制链接后打开有道云笔记App，即可保存链接中的图文内容。与朋友分享观点，或一起编辑有好的想法，可以将编辑好的内容分享笔记链接给好友，或邀请ta一起编辑。 可以现在就创建你的第一篇笔记，探索更多功能。
+                </p>
+            </div>
+
+        </div>
+        <div class="footer">结尾</div>
+    </div>
+</body>
+
+</html>
