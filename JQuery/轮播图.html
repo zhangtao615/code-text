@@ -114,7 +114,6 @@
             timer = setInterval(function () {
                 nowIndex++;
                 if (nowIndex == 3) nowIndex = 0;
-
                 $($(".list-btn li")).eq(nowIndex).triggerHandler("mouseover");
             }, 500)
         };
