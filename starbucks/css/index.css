@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 62.5% !important;
+    }
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.container .content{
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.nav .header{
+    padding:24px;
+}
+.container{
+    height: 100%;
+} 
+.primary li,.header{
+    float: left;
+}
+.hamburger{
+    float: right;
+    padding: 6px 0;
+}
+.nav .primary li{
+    float: left;
+    font-size: 1.6rem;
+    padding: 5px 10px 5px;
+    font-weight: 700;
+  }
+.logo{
+    width: 36px;
+    margin-right: 12px;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
