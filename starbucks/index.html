@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        #container{
+            width: 100%;
+        }
+        .header{
+            margin-top: 10px;
+            width: 30%;
+            position: relative;
+            /* background-color: rgb(214, 186, 186); */
+        }
+        .header span,.middle ul{
+            font-size: 1.6rem;
+            color: inherit;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 5px 10px 5px;
+            
+        }
+        .header div{
+            font-size: 2.5rem;
+            color: inherit;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 20px 0 0 10px;
+        }
+        .header .hamburger{
+           position: absolute;
+           right: 5px;
+        }
+        .display{
+            font-size: 2.6rem;
+            color: inherit;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 5px 10px 5px;
+            margin-top: 300px;
+        }
+        .header .logo{
+            width: 36px;
+        }
+        .middle ul{
+            margin-left:100px ;
+        }
+        .middle li{
+            font-size: 18px;
+            margin-top:10px ;
+        }
+        .account-logout{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .account-logout a{
+            margin-right: 20px;
+            font-size: 16px;
+        }
+        
+       .active{
+            display: none;
+        } 
+        .header .close{
+            margin-top: 10px;
+            font-size: 24px;
+            position: absolute;
+            right: 10px;
+        }
+        #banner{
+            width:70%;
+            background-color: #ccc;
+        }
+        @media(max-width:1024px){
+            .header{
+                width: 100%;
+            }
+        @media(max-width:630px){
+            .header,.account-logout{
+                display: none;
+            }
+            .display{
+                font-size: 2.2rem;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+        }
+        @media(max-width:630px){
+            .middle ul{
+                margin: 0;
+            }
+            .hamburger,.account-logout{
+                display: block;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <img src="./imgs/logo.svg" alt="" class="logo">
+            <span>门店</span>
+            <span>我的账户</span>
+            <span>菜单</span>
+            <span class="hamburger"><img src="./imgs/icon-hamburger.svg" alt=""></span>
+            <button class="icon close active"><img src="./imgs/icon-close.svg" alt=""></button>
+        </div>
+            <div class="display">心情惬意，来杯咖啡吧 ☕</div>
+            <section class="body">
+                    <div class="middle active">
+                        <ul>
+                            <li>门店</li>
+                            <li>星享俱乐部</li>
+                            <li>菜单</li>
+                            <li><hr></li>
+                            <li>星巴克移动应用</li>
+                            <li>星礼卡</li>
+                            <li>星巴克臻选™</li>
+                            <li>专星送™</li>
+                            <li>咖啡星讲堂</li>
+                            <li>上海烘焙工坊</li>
+                            <li>关于星巴克</li>
+                            <li> 帮助中心</li>
+                            <li><hr></li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="account-logout"> 
+                    <img src="./imgs/icon-account.svg" alt="">
+                    <a href="" class="sign-in">登陆</a>
+                    <a href="" class="sign-up">注册</a>       
+                </div>
+        <div id="banner"></div>
+    </div>
+    <script>
+    $(".hamburger").click(function(){
+        $(".body div").removeClass("active");
+        $(".header button").removeClass("active");
+        $(".hamburger").add($(".header span")).addClass("active");
+        $(".display").addClass("active");
+    })
+    $(".header .close").click(function(){
+        $(".body div").addClass("active");
+        $(".header button").addClass("active");
+        $(".hamburger").add($(".header span")).removeClass("active");
+        $(".display").removeClass("active");
+    })
+    </script>
+</body>
+</html>
