@@ -8,47 +8,126 @@ li{
 }
 html{
     font-size: 62.5% !important;
-    }
-.container{
+}
+.container {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
 }
-.container .content{
+.nav{
     width: 30%;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12); 
 }
-.nav .header{
-    padding:24px;
+.container .header img{
+    width: 36px;
 }
-.container{
-    height: 100%;
-} 
-.primary li,.header{
+.nav .content{
+    height: 36px;
+    padding: 24px;
+}
+.container .primary li{
     float: left;
-}
-.hamburger{
-    float: right;
-    padding: 6px 0;
-}
-.nav .primary li{
-    float: left;
-    font-size: 1.6rem;
+    font-size: 1.6em;
     padding: 5px 10px 5px;
     font-weight: 700;
-  }
-.logo{
-    width: 36px;
-    margin-right: 12px;
+}
+.container .header{
+    float: left;
+}
+.container .hamburger{
+   float: right;
+   margin-top: 5px;
 }
 .clearfix::after{
-    content: "";
+    content: '';
     display: block;
     clear: both;
+}
+.body{
+    width: 100%;
+    height: calc(100% - 98px);
+    display: table;
+}
+.nav .body .body-cont{
+    padding: 0 24px 0 84px;
+    display: table-cell;
+    vertical-align: middle;  
+}
+.body .body-cont .bc-text{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.body .btn-bar{
+    margin-top: 20px;
+}
+.body .btn-bar span{
+    color: #00A862;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.body .btn-bar .sign-in{
+    float: left;
+    margin-right: 24px;
+    padding: 3px 0;
+    margin-top: -3px;
+}
+.body .btn-bar img{
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+.body .btn-bar .register{
+    border:1px solid  #00A862;
+    border-radius: 48px;
+    padding: 8px 14px;
+}
+.over-lay.active{
+    visibility: visible;
+    opacity: 1;
+}
+.over-lay{
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .1s ease;
+}
+.over-lay .logo img{
+    padding: 16px;
+    width: 36px;
+    float: left;
+}
+.over-lay .no-header .close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+.over-lay .no-content .noc-body{
+    font-size: 1.8rem;
+    padding: 5px 10px 5px;
+    font-weight: 700;
+    padding: 8px 0;
+    display: table;
+}
+.over-lay .no-content ul{
+    padding-left: 84px;
+    padding-right: 24px;
+    display: table-cell;
+    vertical-align: middle; 
+}
+.over-lay .no-content li{
+    padding: 8px 0;
 }
