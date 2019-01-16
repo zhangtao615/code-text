@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="over-lay">
+            <div class="overlay">
                 <div class="no-header clearfix">
                     <a class="logo" href="javascript:void(0);">
                         <img src="./imgs/logo.svg" alt="">
@@ -76,11 +76,43 @@
                 </div>
             </div>
         </div>
+
+        <div class="content-body">
+            <div class="hero">
+                <div class="hero-btn"></div>
+                <ul class="hero-contetn clearfix">
+                    <li>
+                        <img src="./imgs/1.jpg" class="mobile-hidden">
+                        <img src="./imgs/a.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="./imgs/2.jpg" class="mobile-hidden">
+                        <img src="./imgs/b.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="./imgs/3.jpg" class="mobile-hidden">
+                        <img src="./imgs/c.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="./imgs/4.jpg" class="mobile-hidden">
+                        <img src="./imgs/d.jpg" class="show-mobile">
+                    </li>
+                    <li>
+                        <img src="./imgs/1.jpg" class="mobile-hidden">
+                        <img src="./imgs/a.jpg" class="show-mobile">
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-<script>
-    $(".hamburger").click(function(){
-      $(".over-lay").addClass("active");
-    })
-</script>
+    <script>
+        $(".hamburger").click(function () {
+            $(".overlay").addClass("active");
+        })
+        $(".close").click(function () {
+            $(".overlay").removeClass("active");
+        })
+    </script>
 </body>
+
 </html>

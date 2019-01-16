@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .container .box {
+            width: 500px;
+            margin-bottom: -20px;
+            padding-bottom: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .container .box div {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(62, 83, 204);
+            margin-right: 20px;
+            display: inline-block;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+        </div>
+
+    </div>
+    <button id="left-btn">向左</button>
+    <button id="right-btn">向右</button>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script>
+    $("#right-btn").click(function(){
+        run('right');
+    })
+    $("#left-btn").click(function(){
+        run("left");
+    })
+
+        function run(direction) {
+            var nowLeft = $(".box").scrollLeft();
+            var scrollNum = direction == 'left' ? nowLeft - 200 : nowLeft + 200;
+            $(".box").animate({
+                scrollLeft: scrollNum
+            }, 1000, function () {
+                showBtn();
+            })
+            $(".box").scroll(function () {
+                showBtn();
+            })
+
+            function showBtn() {
+                var scrollLeft = Math.floor($(".box").scrollLeft());
+                var clientWidth = $(".box").width();
+                var scrollWidth = $(".box").get(0).scrollWidth;
+                $("#right-btn").show();
+                $("#left-btn").show();
+                if (scrollLeft == 0) {
+                    $("#left-btn").hide();
+                } else if (scrollLeft + clientWidth == scrollWidth) {
+                    $('#right-btn').hide();
+                }
+            }  
+        }
+    </script>
+</body>
+
+</html>
