@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #board{
+            width: 400px;
+            height:400px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="board" width="400px" height="400px"></canvas>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <script>
+       var oBoard =document.getElementById("board");
+       var context =oBoard.getContext("2d");
+       context.beginPath();        
+       context.moveTo(100, 100);        
+       context.lineTo(400, 400);  
+       context.lineWidth = 5;
+       context.strokeStyle = "black";       
+       context.stroke();
+       
+    </script>
+</body>
+</html>

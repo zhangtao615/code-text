@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #board {
+            width: 400px;
+            height: 400px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="board" width="800" height="800"></canvas>
+    <script>
+        var oBoard = document.getElementById("board");
+        var context = oBoard.getContext("2d");
+        oBoard.onmousedown = function (e) {
+            context.beginPath();
+            context.moveTo(e.clientX * 2, e.clientY * 2);
+            context.lineWidth = 5;
+            context.strokeStyle = "white";
+            oBoard.onmousemove = function (e) {
+                context.lineTo(e.clientX * 2, e.clientY * 2);
+                context.stroke();
+            }
+        }
+
+        document.onmouseup = function () {
+            oBoard.onmousemove = null;
+        }
+    </script>
+</body>
+
+</html>

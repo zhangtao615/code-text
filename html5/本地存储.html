@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // document.cookie='test=123';
+        // document.cookie='test2=123';
+        // let timer=new Date();
+        // timer.setDate(timer.getDate()-1);
+        // document.cookie='test3=123;expires='+timer.toUTCString();
+        // document.cookie='test=123;expires='+timer.toUTCString();
+        // document.cookie='test2=123;expires='+timer.toUTCString();
+        setCookie('test4', '123', '1');
+        delCookie("test4");
+        function setCookie(name, value, expires) {
+            var timer = new Date();
+            timer.setDate(timer.getDate() +parseInt(expires));
+            document.cookie = name +'=' +value+';expires' + timer.toUTCString();
+        }
+        function delCookie(name){
+            var timer = new Date();
+            timer.setDate(timer.getDate()-999);
+            document.cookie = name +'=null;expires' + timer.toUTCString();
+        }
+        function getCookie(name){
+            var nowCookies = document.cookie;
+            var arr = [];
+            arr = nowCookies.split(";");
+            for(var i=0;i<arr.length;i++){
+            if(arr[i].split("=")[0].trim()==name){
+                return (arr[i].split("=")[1]);
+            }
+            }
+   }
+    </script>
+</body>
+
+</html>

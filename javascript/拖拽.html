@@ -33,7 +33,7 @@
                 oDrag.style.top = e.clientY - iDisY + 'px';
                 oDrag.style.left = e.clientX - iDisX + 'px';
             };
-            document.addEventListener('mousemove', fn);
+            document.addEventListener('mousemove' , fn);
 
             oDrag.addEventListener('mouseup', function () {
                 document.removeEventListener('mousemove', fn);
