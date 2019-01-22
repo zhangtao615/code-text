@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var name = '小明';
+        // var key = 'name'
+        // var obj = {
+        //     [key] : name ,
+        //     age : '20'
+        // }
+
+        // var name = '张三';
+        // obj = {
+        //     name,
+        //     age:"20"
+        // }
+        // console.log(obj);
+        //
+        // var obj1 = {
+        //     name : 'ls'
+        // }
+        // var obj2 = {
+        //     name : 'ls'
+        // }
+        // console.log(obj1 == obj2);
+        // console.log(Object.is(obj1,obj2));
+        // console.log(NaN === NaN);
+        // console.log(undefined === undefined);
+        // console.log(null === null);
+        // console.log(+0 == -0);
+        // console.log(+0,-0);
+        // console.log(Object.is(obj1 , obj2));
+        // console.log(Object.is(undefined,undefined));
+        // console.log(Object.is(null,null));
+        // console.log(typeof null);
+        //
+        var obj1 = {
+            name:'张三'
+        }
+        var obj2 = {
+            age:'20'
+        }
+        Object.assign(obj1,obj2);
+        console.log(Object);
+        if('name' in obj){
+            console.log('YES');   
+        }    
+    </script>
+</body>
+</html>

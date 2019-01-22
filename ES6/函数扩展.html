@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function foo(name='李四',age,sex,school){
+        console.log('name=',name);
+        console.log('age=',age);
+        console.log('sex=',sex);
+        console.log('school=',school);
+    }
+    foo('张三',20,'男','xx');
+    console.log(foo.length);//返回形参的个数，如果给形参赋值，会使length失真；
+    console.log(foo.name);//返回函数名
+    
+    </script>
+</body>
+</html>

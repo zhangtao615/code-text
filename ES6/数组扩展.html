@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li class="8">8</li>
+    </ul>
+    <script> 
+    // //Array.from   
+    //     var aLi = document.getElementsByTagName("li");
+    //     aLi = Array.from(aLi);
+    //     console.log(aLi);
+    //     var json = {
+    //         '0':"商品1",
+    //         '1':"商品2",
+    //         '2':"商品3",
+    //         length:3
+    //     }
+    //     json = Array.from(json);
+    //     console.log(json);
+    //     //Array.of
+    //     console.log(Array.of(1,2,{name:'小红'},'20',undefined,null));
+    //     //arr.copyWithin
+    //     let arr = [1,2,3,4,5,6,7,8,9];
+    //     arr.copyWithin(1,4,7)
+    //     console.log(arr);
+    //     //arr.copyWithin
+    //     var num = arr.find(function(val,key,arr){
+    //         console.log(val,key,arr);
+    //         return key > 5
+    //     })
+    //     //arr.findIndex()
+    //     var num = arr.findIndex(function(val,key,arr){
+    //         return key > 5
+    //     })
+    //     console.log(num);
+    //     //arr.fill
+        var arr1 = [1,2,3,4,5]
+    //     arr1.fill('xy',1,2);
+    //     console.log(arr1);
+    //     var arr2 = new Array(10).fill('xy');
+    //     console.log(arr2);
+    //     //arr.includes()
+    //     console.log(arr1.includes(3));
+    //     //遍历数组
+    //     for(var val of arr1){
+    //         console.log(arr1);
+            
+    //     }
+    //     for (var [key,val] of arr.entries()){
+    //         console.log(key,val);   
+    //     }
+    //         //arr.map
+    //     var newArr = arr1.map (function(val,key,arr){
+    //         if(val > 0){
+    //             return val ;
+    //         }else {
+    //             return 0;
+    //         }
+    //     })
+    //         //arr.filter()
+    //     var newArr = arr1.filter (function(val,key,arr){
+    //         if(val > 0){
+    //             return val ;
+    //         }
+    //     })
+    //         //arr.some
+    //     var newArr = arr1.some (function(val,key,arr){
+    //         if(val > 0){
+    //             return val ;
+    //         }
+    //     })    
+            //arr.every
+        var newArr = arr1.every (function(val,key,arr){
+            if(val > 0){
+                return val ;
+            }
+            console.log(val);
+            
+        })       
+    </script>
+</body>
+</html>
