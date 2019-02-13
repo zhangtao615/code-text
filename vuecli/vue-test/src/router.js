@@ -16,7 +16,10 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: () => import('./views/About.vue')
+      component: () => import('./views/About.vue'),
+      // beforeEnter(to,from,next){
+      //    next(); 
+      // }
     },
     {
       path:"/mine",
@@ -34,7 +37,7 @@ export default new Router({
           component:() => import("./views/Pack1.vue")
         },
         {
-          path:"/pack/pack2",
+          path:"/pack/pack2/:name",
           name:'pack2',
           component: () => import("./views/Pack2.vue")
         }

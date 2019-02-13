@@ -1,7 +1,7 @@
 <template>
     <div>
-        子路由测试1
+        <h3>子路由测试1</h3>
         <br>
-        name:{{$route.params.name}}
+        传参:{{$route.params.name}}
     </div>
 </template>
