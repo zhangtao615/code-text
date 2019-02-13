@@ -1,4 +1,4 @@
-# vue-tese2
+# project-test
 
 ## Project setup
 ```
