@@ -7,7 +7,8 @@
       <router-link to="/pack">Pack</router-link>|
       <router-link :to="{name:'pack1',params:{name:'pack1'}}">子路由测试1</router-link>|
       <router-link to="/pack/pack2/pack2">子路由测试2</router-link>|
-      <router-link to="/home">返回首页</router-link>
+      <router-link to="/home">返回首页</router-link>|
+      <router-link to="/name">别名</router-link>
       <button @click="back">返回首页</button>
     </div>
     <transition name="fade">
@@ -20,7 +21,7 @@
 export default {
   methods:{
     back(){
-      console.log(123);
+      // console.log(123);
       
       this.$router.push("/");
     }

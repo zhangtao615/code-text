@@ -30,6 +30,7 @@ export default new Router({
       path:"/pack",
       name:"/pack",
       component: () => import("./views/Pack.vue"),
+      alias:"/name",
       children:[
         {
           path:"/pack/pack1",
