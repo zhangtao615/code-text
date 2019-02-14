@@ -1,42 +1,20 @@
 <template>
-  <div id="app" class="clearfixed">
-    <router-view/>
+  <div id="app">
     <div id="nav">
-      <router-link to="/">电影</router-link> 
-      <router-link to="/music">音乐</router-link>
-      <router-link to="/chat">智能闲聊</router-link>
-      <router-link to="/book">图书</router-link>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-    
+    <router-view/>
   </div>
 </template>
 
 <style>
-
-*{
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
-  @media(max-width:640px){
-    #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    }
-    #nav{
-      position: fixed;
-      bottom: 40px;
-      background-color:red; 
-    }
-    #nav a{
-      margin:0 20px 0 20px;  
-    }
-    .clearfixed::after{
-      content:'',
-      display：block,
-      clear：both;
-    }   
-}
-
 </style>

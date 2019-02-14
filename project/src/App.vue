@@ -1,13 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <navigate :navVal="activeNav"/>
+      <router-view @changeNav="change"/>
     </div>
-    <router-view/>
-  </div>
+    
 </template>
-
+<script>
+import navigate from './components/Navigator.vue'
+export default {
+  data() {
+    return {
+      activeNav:{
+        title:"电影",
+        className:"movie"
+    }
+  } 
+},
+methods: {
+  change(obj){
+    this.activeNav.title = obj.title;
+    this.activeNav.className = obj.className;
+}
+},  
+components:{
+    navigate
+  }
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
