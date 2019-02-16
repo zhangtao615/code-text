@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            data: {
+                a: 1,
+                b: 2,
+                c: 3,
+                d: 4,
+                e: {
+                f: {
+                    g: 5
+                }
+                }
+            },
+            watch: {
+                a: function (val, oldVal) {
+                console.log('new: %s, old: %s', val, oldVal)
+                },
+                // 方法名
+                b: 'someMethod',
+                // 深度 watcher
+                c: {
+                handler: function (val, oldVal) { /* ... */ },
+                deep: true
+                },
+                // 该回调将会在侦听开始之后被立即调用
+                d: {
+                handler: function (val, oldVal) { /* ... */ },
+                immediate: true
+                },
+                e: [
+                'handle1',
+                function handle2 (val, oldVal) { /* ... */ },
+                {
+                    handler: function handle3 (val, oldVal) { /* ... */ },
+                    /* ... */
+                }
+                ],
+                // watch vm.e.f's value: {g: 5}
+                'e.f': function (val, oldVal) { /* ... */ }
+            }
+            })
+            vm.a = 2 // => new: 2, old: 1
+        </script>
+</body>
+</html>

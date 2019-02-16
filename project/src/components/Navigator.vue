@@ -1,5 +1,5 @@
 <template>
-<div :class="activeClass">
+<div :class="{activeClass}">
     <header>
         <h1>{{activeTitle}}</h1>
         <span @click='routerPush(navList[0])'>首页</span>
@@ -72,11 +72,13 @@ export default {
         position: fixed;
         background-color:rgb(33, 150, 243);
         color: #ffffff;
+        text-align: center;
     }
     header{
         top: 0;
         width: 100%;
         height: 1rem;
+        line-height: 1rem;
     }
     header span{
         position: absolute;
@@ -86,9 +88,10 @@ export default {
     }
     nav{
         bottom: 0;
-        width: 100%;
         height: 1rem;
+        width: 100%;
     }
+
     nav li{
         float: left;
         width: 25%;
