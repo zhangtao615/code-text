@@ -33,7 +33,6 @@ export default {
           arr[index].lrc = location.origin+'/'+element.lrc
         });
         this.musicList = arr;
-        console.log(arr);
         this.isShow =true
       })
     },
