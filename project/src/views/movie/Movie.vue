@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="movieList clearfix">
-      <li v-for="(item,index) in movieList" :key="index" class="movieList clearfix">
+      <li v-for="(item,index) in movieList" :key="index" class="movieList clearfix" @click="skip(item.id)">
         <div class="movieList-left">
           <img :src="item.cover.url" alt>
         </div>
@@ -52,10 +52,13 @@ export default {
     this.getData();
   },
   methods: {
+    skip(id){
+      this.$router.push({name:'movieDetail',params:{movieId:id}})
+    },
     getData() {
       let proxy = "https://bird.ioliu.cn/v2?url=";
       let url = `https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?star=${
-        this.movueStart
+        this.movieStart
       }&count=10`;
       this.isLoading = false;
       axios

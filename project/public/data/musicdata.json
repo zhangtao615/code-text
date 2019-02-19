@@ -1,0 +1,73 @@
+{
+  "musicData": [
+    {
+      "title": "一定要幸福",
+      "artist": "张靓颖",
+      "src": "http://dl.stream.qqmusic.qq.com/M500000wubcy3RkeYp.mp3?vkey=9F9346013246EF1FC40665199197FD9ACDEE6DDBC965887D45BE6DDB4A662BE1677DE09BE70E6A04D0C0CC5B90FD8C228983DBA0166CE778&guid=5150825362&fromtag=1",
+      "pic": "http://y.gtimg.cn/music/photo_new/T002R300x300M000003V7SAg16Ed0F.jpg",
+      "lrc": "lrc/张靓颖-一定要幸福.lrc"
+    },
+    {
+      "title": "相思赋予谁",
+      "artist": "好妹妹乐队",
+      "src": "http://dl.stream.qqmusic.qq.com/M500002btSvp3AzWfA.mp3?vkey=D79818D8ABF195CE3D718D6C396FEBA616D451633E07014D2384849780D4052633C8FC3DBD69257709941BA07A0715EB6434782754678CDC&guid=5150825362&fromtag=1",
+      "pic": "http://y.gtimg.cn/music/photo_new/T002R300x300M0000002RAMa0egDrz.jpg",
+      "lrc": "lrc/好妹妹乐队-相似赋予谁.lrc"
+    },
+    {
+      "title": "遥远的你 (正式版)",
+      "artist": "221小伙伴",
+      "src": "http://dl.stream.qqmusic.qq.com/M500003NCS053QVDGa.mp3?vkey=76A4BE1BED5B975755D41453C0D2B75C111C5C87D1B87B7648E586942594EECD97B359EEC3F4BCC9985375419C1556A2D8CF2BEA96617E6B&guid=5150825362&fromtag=1",
+      "pic": "https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=b47cbaa196504fc2b652b85784b48c74/d058ccbf6c81800a828abfa7bc3533fa828b472f.jpg",
+      "lrc": "lrc/221小伙伴-遥远的你 (正式版).lrc"
+    },{
+    "title": "起风了",
+    "artist": "买辣椒也用卷",
+    "src": " http://sc1.111ttt.cn/2018/1/03/13/396131213056.mp3",
+    "pic": " https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550484995433&di=9cfe2b33a74a71d8c561a482c85ac720&imgtype=0&src=http%3A%2F%2Fimg.mp.sohu.com%2Fupload%2F20180526%2F918821cd61ef481f84db46dcae513343_th.png",
+    "lrc": "lrc/起风了.lrc"
+  }, {
+    "title": "最美的期待",
+    "artist": "周笔畅",
+    "src": "http://sc1.111ttt.cn/2018/1/03/13/396131229550.mp3",
+    "pic": "https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=24ddbc9dbd7eca80060831b5f04afcb8/d53f8794a4c27d1e44d7217a16d5ad6edcc4389e.jpg",
+    "lrc": "lrc/周笔畅-最美的期待.lrc"
+  }, {
+    "title": "追光者",
+    "artist": "岑宁儿",
+    "src": "  http://sc1.111ttt.cn/2017/1/11/11/304112002347.mp3",
+    "pic": "https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=30890d065fe736d158138b0ea36b28ff/728da9773912b31b38d68ef38d18367adbb4e1b6.jpg",
+    "lrc": "lrc/岑宁儿-追光者.lrc"
+  }, {
+    "title": "广东爱情故事",
+    "artist": "广东雨神",
+    "src": "http://sc1.111ttt.cn/2018/1/03/13/396131203208.mp3",
+    "pic": "https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=ae6120b58e26cffc692ab8b4813a2dad/4ec2d5628535e5ddfe35f3f37ac6a7efce1b6284.jpg",
+    "lrc": "lrc/广东雨神-广东爱情故事.lrc"
+  }, {
+    "title": "一曲相思",
+    "artist": "半阳",
+    "src": "http://dl.stream.qqmusic.qq.com/M500002u0fTY2HoJJp.mp3?vkey=395438E15580A55D6E66AFC219BBA35BE7BF29B1BA2F4C80DEF4FEE9DA898642F0744D35BC1F0C9CA05A1873E9FDEC2E2F46139426B5FC6C&guid=5150825362&fromtag=1",
+    "pic": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551144755&di=5772173fba90c87bfc3efee2ed1d7055&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F30fbd6641b0927035311859612434a70.jpeg",
+    "lrc": "lrc/半阳-一曲相思.lrc"
+  },{
+    "title": "理想三旬",
+    "artist": "陈鸿宇",
+    "src": "http://dl.stream.qqmusic.qq.com/M500002Yzfab3R9lMM.mp3?vkey=217A9C41EC8E35E17D39FF6DD6AFA3BC2E1186BF7090FD8F20A09673B35ADADA9CBEACE7CA2B3850519F5AFCA3A19A7AC75F39183455DB99&guid=5150825362&fromtag=1",
+    "pic": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550551104553&di=3194f2af4ca56cf18267a7babd5bc24c&imgtype=0&src=http%3A%2F%2Fcdnimg103.lizhi.fm%2Faudio_cover%2F2017%2F03%2F22%2F2591942224824751111_580x580.jpg",
+    "lrc": "lrc/陈鸿宇-理想三旬.lrc"
+  },{
+    "title": "十二",
+    "artist": "留声玩具",
+    "src": "http://dl.stream.qqmusic.qq.com/M500001WJlqB3EE7Oi.mp3?vkey=DDB1DCA17F7BECC88623D0DBFDB33D01D3922656B3391DE0AE4C556DB2F117A0817D44ED325098641A109EA4D408AEE768919BB0BD63D721&guid=5150825362&fromtag=1",
+    "pic": "https://imgessl.kugou.com/stdmusic/20180601/20180601191513122196.jpg",
+    "lrc": "lrc/留声玩具-十二.lrc"
+  },{
+    "title": "华年",
+    "artist": "鹿先森乐队",
+    "src": "http://dl.stream.qqmusic.qq.com/M500002L0Atv157MxM.mp3?vkey=62B1FBF7404B73E15E055B363370297A5CE50E10F094195ED296E6EF8094805664FF6E0205A0591F55BB8E094BDBCC21BBCAF9030B945480&guid=5150825362&fromtag=1",
+    "pic": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000f5xoX3NRMAi.jpg",
+    "lrc": "lrc/鹿先森乐队-华年.lrc"
+  }
+]
+}

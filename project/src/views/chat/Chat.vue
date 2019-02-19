@@ -2,7 +2,7 @@
   <div>
     <div class="talk-bar">
       <ul>
-        <li v-for="(item,index) in talkList" :key="index">
+        <li v-for="(item,index) in talkList" :key="index" class="trans">
           <div class="right">
             <span>{{item.question}}</span>
           </div>
@@ -12,10 +12,12 @@
         </li>
       </ul>
     </div>
-    <div class="talk-form">
-      <input type="text" v-model="msg" id="msgInput">
-      <button @click="send">发送</button>
-    </div>
+      <div class="talk-form">
+          <input type="text" v-model="msg">
+          <button @click="send">发送</button>
+      </div>
+      <div class="occupy"></div>
+   
   </div>
 </template>
 <script>
@@ -84,9 +86,8 @@ export default {
           answer:res.data.data.answer
         }
         this.talkList.push(obj)
+        console.log(this);
       })
-      $('#msgInput').val('')
-	    
     }
     
   }
@@ -104,18 +105,19 @@ export default {
   .talk-form input,button{
     transform: translateY(50%)
   }
-  .talk-bar{
-    height:100%-2rem;
-  }
   .talk-bar span{
     padding:5px 10px;
     background-color: rgb(195, 240, 195);
     border-radius: 5px;
   }
   .talk-bar .left{
-    text-align: left
+    text-align:left;
   }
   .talk-bar .right{
     text-align: right
+  }
+  .occupy{
+    width: 100%;
+    height: 1rem;
   }
 </style>
