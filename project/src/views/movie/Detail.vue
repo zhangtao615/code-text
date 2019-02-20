@@ -1,11 +1,12 @@
 <template>
     <div>
        <div class="picture clearfix"><img :src="movieInfo.images.small" alt=""></div>
-       <div class="information clearfix">
+       <div class="information">
            <h4>{{movieInfo.title}}</h4>
            <h5>{{movieInfo.aka}}</h5>
            <div>评分：{{movieInfo.rating.average}}分</div>
        </div>
+       <h3>简介：</h3>
        <div class="summary">{{movieInfo.summary}}</div>
        <div class="loading" v-show="!isLoading">
             <div class="loading-content">
@@ -43,7 +44,14 @@ export default {
 </script>
 <style scoped>
 .picture,.information{
+    height: 4rem;
     float: left;
+}
+.picture{
+    width: 40%;
+}
+.information{
+    width: 50%;
 }
 .picture img{
     width: 2.5rem;

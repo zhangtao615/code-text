@@ -1,4 +1,7 @@
 {
-    "python.pythonPath": "E:\\python.exe",
+    "emmet.includeLanguages": {
+        "react-html":"html",
+        "javascript": "javascriptreact"
+    },
     "git.ignoreLimitWarning": true
 }

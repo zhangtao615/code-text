@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.production.min.js"></script>
+    <script src="./js/react-dom.production.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class King extends React.Component{
+            constructor(props){
+                super(props);
+                this.state = {
+                    soilder:100,
+                    generalA:100,
+                    generalB:100
+                }
+            }
+            soilderCommand(){
+                let soildder = this.state.soiler;
+                let generalA = this.state.generalA;
+                let generalB = this.state.generalB;
+                if(user == "A"){
+                    generalA+=10;
+                }else if(user == "B"){
+                    generalB+=10;
+                }
+                soiler-=10;
+                this.setState({
+                    soilder,
+                    generalA,
+                    generalB
+                })
+            }
+            render(){
+                return(
+                    <div>
+                        <div>国王士兵数量：{this.state.soilder}</div>
+                        <General generalPass={this.soilderCommand.bind(this)} name={'A'} soilder={this.state.generalA}/>
+                        <General generalPass={this.soilderCommand.bind(this)} name={'B'} soilder={this.state.generalB}/>
+                    </div>
+                )
+            }
+        }
+        class General extends React.Component{
+            constructor(props){
+                super(props)
+            }
+            callSoilder(){
+                this.props.generalPass(this.props.name)
+            }
+            render(){
+                return(){
+                    <div>
+                        将军{this.props.name}有{this.props.soilder}士兵
+                         <button onClick={this.callSoilder.bind(this)}>调兵</button>
+                    </div>
+                }
+            }
+        }
+      ReactDOM.render(
+        <King/>,
+        document.getElementById("root")
+      )
+    
+    </script>
+</body>
+</html>
