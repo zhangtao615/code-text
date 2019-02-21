@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .all{
+            width: 80%;
+            margin-left: 10%;
+        }
+        .put{
+            margin:10px 0;
+        }
+        .put input,button{
+            display: block;
+            margin-right: 20px;
+            float: left;
+        }
+    </style>
+    <script src="./js/react.production.min.js"></script>
+    <script src="./js/react-dom.production.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class ToDoList extends React.Component{
+            constructor(props) {
+                super(props);
+                this.state ={
+                    dataList:[
+                        {
+                            affair:'上课',
+                            time:'2018-09-14',
+                            affairTime:'2'
+                        }
+                    ]
+                }
+                
+            }
+            render(){
+                return (
+                    <div class="all">
+                        <div class="put">
+                            <input type="text" placeholder="待办事项"/> 
+                            <input type="date"/>
+                            <input type="text" placeholder="待办用时"/> 
+                            <button type="button" class="btn btn-success">添加</button> 
+                        </div>    
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">待办事项</th>
+                                    <th scope="col">待办时间</th>
+                                    <th scope="col">预计时间</th>
+                                    <th scope="col">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><input type="checkbox"/></th>
+                                    <td>{this.state.data.affair}</td>
+                                    <td>{this.state.data.time}</td>
+                                    <td>{this.state.data.affairTime}</td>
+                                    <td><button type="button" class="btn btn-danger">删除</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                            <button type="button" class="btn btn-danger">删除选中</button> 
+                            <span>总共用时：0</span>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(
+            <ToDoList/>,
+            document.getElementById('root')
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .dia-mask{
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.3);
+       }
+       .active{
+           display: block !important;
+       }
+       .dia-box{
+           width: 400px;
+           height: 300px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           margin-top: -200px;
+           margin-left:-150px;
+       } 
+       .dia-header{
+           background-color: #000;
+           color: #fff;
+           width: 100%;
+           height: 50px;
+       }
+       .dia-header div{
+         margin: 10px
+       }
+       .dia-header div:first-child{
+           float: left;
+       }
+       .dia-header div:last-child{
+           float: right;
+       }
+    </style>
+    <script src="./js/react.production.min.js"></script>
+    <script src="./js/react-dom.production.min.js"></script>
+    <script src="./js/browser.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    class Dialog extends React.Component{
+        constructor(props) {
+            super(props);
+            this.state ={
+                name:"",
+                isShow:false
+            }
+            this.changeShow = this.changeShow.bind(this)
+        }
+        changeShow(state,name){
+            this.setState({
+                isShow:state,
+                name:name
+            })
+        }
+        render(){
+            return(
+                <div>
+                    <div>
+                        <DiaBtn showDia={this.changeShow} name={'登录'}/>
+                        <DiaBtn showDia={this.changeShow} name={'注册'}/>
+                        <diaContent title={this.state.name} hideDia={this.changeShow} isShow={this.state.isShow}/>
+                    </div>
+                </div>
+            )
+        }
+    }
+        class DialogContent extends React.Component{
+            constructor(props){
+                super(props)
+            }
+            closeDia(){
+                this.props.hideDia(false)
+            }
+            render(){
+                let style={
+                    diaplay:this.props.isShow?'block':'none'
+                }
+                return (
+                  <div calss="dia-mask" style={style}>
+                    <div class="dia-box">
+                        <div class="dia-header">
+                            <div>{this.props.title}</div>
+                            <div onClick={this.closeDia.bind(this)}>X</div>
+                        </div>
+                        <div class="dia-body">
+                            {this.props.title=="登录"?<Login/>:<Register/>}
+                        </div>
+                    </div>
+                  </div>  
+                )
+            }
+        }
+        class DiaBtn extends React.Component{
+            constructor(props) {
+                super(props);
+                
+            }
+            show(){
+                this.props.showDia(true,this.props.name)
+            }
+            render(){
+                return(
+                    <div>
+                        <button onClick={this.show.bind(this)}>{this.props.name}</button>
+                    </div>
+                )
+            }
+        }
+        function Login() {
+            return <h1>登录</h1>
+        }
+        function Register() {
+            return <h1>注册</h1>
+        }
+        ReactDOM.render(
+            <Dialog/>,
+            document.getElementById('root')
+        )
+    </script>
+</body>
+</html>
