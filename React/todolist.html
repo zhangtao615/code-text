@@ -10,14 +10,6 @@
             width: 80%;
             margin-left: 10%;
         }
-        .put{
-            margin:10px 0;
-        }
-        .put input,button{
-            display: block;
-            margin-right: 20px;
-            float: left;
-        }
     </style>
     <script src="./js/react.production.min.js"></script>
     <script src="./js/react-dom.production.min.js"></script>
@@ -31,25 +23,59 @@
             constructor(props) {
                 super(props);
                 this.state ={
-                    dataList:[
+                    dataList : [
                         {
+                            id:'1',
                             affair:'上课',
+                            time:'2018-09-14',
+                            affairTime:'10'
+                        },
+                        {
+                            id:'2',
+                            affair:'吃饭',
+                            time:'2018-09-14',
+                            affairTime:'1'
+                        },
+                        {
+                            id:'3',
+                            affair:'午休',
+                            time:'2018-09-14',
+                            affairTime:'2'
+                        },
+                        {
+                            id:'4',
+                            affair:'聚会',
                             time:'2018-09-14',
                             affairTime:'2'
                         }
+                       
                     ]
                 }
-                
+                                
+            }
+            delete(id){
+                let newDataList = [];
+                console.log(this.state.dataList.id);
             }
             render(){
                 return (
-                    <div class="all">
-                        <div class="put">
-                            <input type="text" placeholder="待办事项"/> 
-                            <input type="date"/>
-                            <input type="text" placeholder="待办用时"/> 
-                            <button type="button" class="btn btn-success">添加</button> 
-                        </div>    
+                    <div class="all">   
+                        <div class="mb-5 mt-5"> 
+                            <form>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="info" class="form-control" placeholder="待办事项"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="date" name="time" class="form-control" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="count" class="form-control"  placeholder="预计用时"/>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">添加</button>
+                                </div>
+                            </form>
+                        </div>   
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>
@@ -60,15 +86,15 @@
                                     <th scope="col">操作</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><input type="checkbox"/></th>
-                                    <td>{this.state.data.affair}</td>
-                                    <td>{this.state.data.time}</td>
-                                    <td>{this.state.data.affairTime}</td>
-                                    <td><button type="button" class="btn btn-danger">删除</button></td>
-                                </tr>
-                            </tbody>
+                            {this.state.dataList.map((item,index) =><tbody key={index}>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox"/></th>
+                                        <td>{item.affair}</td>
+                                        <td>{item.time}</td>
+                                        <td>{item.affairTime}</td>
+                                        <td><button type="button" class="btn btn-danger" onClick={this.delete.bind(this,item.id)}>删除</button></td>
+                                    </tr>
+                            </tbody>)}
                         </table>
                             <button type="button" class="btn btn-danger">删除选中</button> 
                             <span>总共用时：0</span>
