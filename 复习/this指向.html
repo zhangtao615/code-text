@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        
+        function a(){
+           // console.log("function里面this指向"+this)//window
+        }
+        a();
+        setTimeout(function(){
+           // console.log("定时器this指向"+this)//window
+        },50);
+        var aLi = document.getElementsByTagName('li');
+        for(var i =0 ;i<aLi.length;i++){
+            
+            aLi[i].onclick = function(){
+                setTimeout(function(){
+                  console.log(this);//window
+                }.bind(this),100)//改变函数this指向用bind
+                //console.log(this);
+            }
+        }
+
+        //实例化对象
+        var obj= {
+            say:function(msg1,msg2){
+                console.log(this,msg1,msg2)//指向实例化对象obj
+            }
+        }
+        //obj.say();
+
+        /*
+            改变this指向
+            call()
+            apply()
+            bind()
+            区别：bind只改变不调用
+                  apply后面参数要用数组传进去
+                  call、bind传参方式相同
+        */
+        var obj2 = {
+            name:'VV',
+            age:20
+        }
+        obj.say.call(obj2,'嘻嘻','哈哈哈')//obj2
+        obj.say.apply(obj2,['嘻嘻','哈哈哈'])//obj2
+        obj.say.bind(obj2)('嘻嘻','哈哈哈')//obj2
+    </script>
+</body>
+</html>
