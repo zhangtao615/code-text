@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">1
+        <div id="div2">2</div>
+    </div>
+    <script>
+        /*
+        事件 事件源 事件处理函数
+        */
+        var oDiv = document.getElementById('div1');
+        oDiv.onclick= function(e){
+            console.log(e.target);//事件源
+            console.log(this);//this指向当前对象
+        }
+    </script>
+</body>
+<style>
+    #div1{
+        width: 200px;
+        height: 200px;
+        background-color: #ee0000;
+    }
+    #div2{
+        width: 100px;
+        height: 100px;
+        background-color: #00ee00;
+    }
+</style>
+</html>
