@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //宏任务
+    setTimeout(function(){
+        console.log("定时器 宏任务2")//1
+    },0)
+    console.log("定时器结束 宏任务1")//2
+
+    //微任务
+    new Promise(function (resolve){
+        console.log("Promise开始 微任务3")//3
+        for(var i =0;i<1000;i++){
+            i == 99 && resolve();
+        }
+    }).then(function(){
+        console.log("then 开始 微任务4")//4
+    })
+    //执行顺序 2 3 4 1
+    //宏任务执行结束--->查找有无可执行微任务，若有执行若没有-->执行宏任务
+    </script>
+</body>
+</html>

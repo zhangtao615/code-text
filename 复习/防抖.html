@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 一个需要频繁触发的函数，在规定的时间内只触发最后一次 -->
+    <button id="btn">click</button>
+    <script>
+    //函数去抖 debounce
+    var oBtn = document.getElementById('btn');
+    function debounce(fn,delay){
+        var timer = null;//设置全局变量定时器
+        return function(){
+            clearTimeout(timer);//每次执行前清除定时器
+            timer = setTimeout(function(){
+                fn.call(this)
+            }.bind(this),delay);
+        }
+    }
+    oBtn.onclick =debounce(function(){
+        console.log("on");
+        console.log(this);
+    },300)
+    </script>
+</body>
+</html>
