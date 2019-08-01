@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        新特性
+            let const 
+            箭头函数
+            解构赋值
+            扩展运算符 ...
+            promise
+            set map
+            class
+        */ 
+       
+        
+        //let var区别
+
+        //let没有变量提升
+        console.log(a)
+        var a= 10; //undefine
+        let a =10; //not define
+        // let 不能重复声明
+        let b = 10;
+        b = 20;
+        //let 不允许同名变量 暂时性死区
+
+        //const
+        const obj = {
+            name:'zs',
+            age:18
+        }
+        obj.freeze(obj)//使obj里面的值无法改变
+        obj.name = 'ls'
+        console.log(obj)
+    </script>
+</body>
+</html>
