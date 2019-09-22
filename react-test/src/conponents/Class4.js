@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import conn from "../store"
+//import conn from "../store"
 import {connect} from 'react-redux'
 const add =(num)=>{
     return{

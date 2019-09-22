@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="div1"> 
+        <div id="div2">   
+
+        </div>
+    </div>
+
+    <script>
+        var oDiv1 = document.getElementById('div1')
+        var oDiv2 = document.getElementById('div2')
+        oDiv1.style.background = 'red'
+        oDiv2.style.background = 'green'
+        oDiv1.onclick = function(){
+            console.log('div1')
+        }
+        oDiv2.onclick = function(event){
+            console.log('div2')
+            //event.stopPropagation();
+            event.cancelBubble = true;
+        }
+    </script>
+</body>
+</html>
