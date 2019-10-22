@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*构造函数式继承
+     function Father1(name,age){
+            this.father_Property1 = name
+            this.father_Property2 = age
+        }
+        function Son1(){
+            Father1.call(this,'zs',18);//或apply
+            console.log(this.father_Property2)
+        }
+        Son1();
+         new Son1().father_Property1;
+         new Son1().father_Property2; 
+    */  
+
+
+
+    /*原型链式继承
+    function Father1(){
+            this.father_Property1 = "父类属性1"
+            this.father_Property2 = "父类属性2"
+        }
+        function Son1(){
+           
+        }
+        Son1.prototype = new Father1()
+        Father1.prototype.father_Property3 = "父类属性3"
+        console.log(new Son1().father_Property1)//"父类属性3"
+
+        var s1 = new Son1()
+        s1.father_Property1.push("新推入的属性")
+        console.log(s1.father_Property1)// ["父类属性10", "父类属性11", "父类属性12", "新推入的属性"]
+        
+        var s2 =new Son1();
+        console.log(s2.father_Property1)// ["父类属性10", "父类属性11", "父类属性12", "新推入的属性"]
+        */
+
+
+        /*组合式继承
+        function Father1(){
+            this.father_Property1 = ["父类属性01","父类属性02","父类属性03"]
+            this.father_Property2 = "父类属性2"
+        }
+        function Son1(){
+            Father1.call(this);//或apply
+        }
+        Son1.prototype = new Father1();
+        var s1 =new Son1();
+        var s2 =new Son1();
+        console.log(s1 instanceof Son1) //true
+        console.log(s1 instanceof Father1) //true
+        */
+    </script>
+</body>
+</html>

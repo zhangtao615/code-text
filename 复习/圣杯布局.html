@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+        }
+
+        .left {
+            flex: 0 0 200px;
+            order: -1;
+            background-color: #00f;
+        }
+        .right{
+            flex: 0 0 150px;
+            background-color: #0f0;
+        }
+        .middle{
+            flex: 1;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <!--flex实现-->
+    <div id="container">
+        <div class="middle">002</div>
+        <div class="left">001</div>
+        <div class="right">003</div>
+    </div>
+</body>
+
+</html>
