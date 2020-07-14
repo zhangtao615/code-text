@@ -17,7 +17,6 @@
           <button @click="send">发送</button>
       </div>
       <div class="occupy"></div>
-   
   </div>
 </template>
 <script>
@@ -86,7 +85,6 @@ export default {
           answer:res.data.data.answer
         }
         this.talkList.push(obj)
-        console.log(this);
       })
     }
     
